@@ -1,5 +1,5 @@
 package assignment01;
-public class Exercise1_4 {
+public class Exercise1_4_Part_A {
 
     //Program a method that computes recursively (i. e. without loops) how often the
     //character ch is contained in the array arr.
