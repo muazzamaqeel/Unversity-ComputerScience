@@ -2,7 +2,6 @@ package assignment01;
 
 public class Exercise1_5_Part_B {
 
-    public static int i = 0;
     public static boolean containsOdd(int[] arr, int endIndex){
         if(arr==null || endIndex >= arr.length){
             return true;
