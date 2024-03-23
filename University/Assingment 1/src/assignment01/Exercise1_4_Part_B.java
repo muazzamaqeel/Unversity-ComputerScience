@@ -51,7 +51,7 @@ public class Exercise1_4_Part_B {
     }
 
     private static boolean checkPalindrome(char[] sequence, int i, int j) {
-        if (i >= j) {
+        if (i > j) {
             return true;
         } else {
             if (sequence[i] != sequence[j]) {
