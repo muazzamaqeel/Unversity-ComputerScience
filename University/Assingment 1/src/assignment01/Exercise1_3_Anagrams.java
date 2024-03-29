@@ -1,5 +1,6 @@
 package assignment01;
 
+import jdk.jfr.Frequency;
 import org.junit.Test;
 
 import java.util.Random;
@@ -11,6 +12,9 @@ public class Exercise1_3_Anagrams {
      * Checks if both strings are anagrams, i.e. one string can be formed by
      * rearranging the characters of the other.
      */
+
+
+    /*
     public static boolean areAnagrams(String s1, String s2){
         char[] arr2 = s2.toCharArray();
         char[] arr1 = s1.toCharArray();
@@ -28,6 +32,33 @@ public class Exercise1_3_Anagrams {
         }
         return true;
     }
+    */
+
+    public static int i=0;
+    public static int j=0;
+    public static boolean areAnagrams(String s1, String s2) {
+        char[] arr1 = s1.toCharArray();
+        char[] arr2 = s2.toCharArray();
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+        java.util.Arrays.sort(arr1);
+        java.util.Arrays.sort(arr2);
+        return checkAnagrams(0, arr1, arr2); // Start recursion from the first index
+    }
+    public static boolean checkAnagrams(int index, char[] arr1, char[] arr2) {
+        if (index == arr1.length) {
+            return true; // Reached the end of arrays without mismatches
+        }
+        if (arr1[index] != arr2[index]) {
+            return false; // Found a mismatch
+        }
+        return checkAnagrams(index + 1, arr1, arr2);
+    }
+
+
+
+
 
 
 

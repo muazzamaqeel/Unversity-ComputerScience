@@ -1,7 +1,6 @@
 package assignment01;
 
 public class Exercise_1_7 {
-
     public static String myMeth(int n) {
         if (n < 0) {
             return myMeth(-n);
@@ -13,9 +12,7 @@ public class Exercise_1_7 {
             return myMeth(2 * n) + myMeth(n + 1);
         } else {
             return "baab";
-
         }
-
     }
     public static void main(String[] args) {
         int[] testCases = {-15, 0, 5, 20, 40};

@@ -62,11 +62,13 @@ public class Exercise1_4_Part_B {
     }
 
     public static void main(String[] args) {
-        char[] arr2 = new char[]{'C', 'I','V','I','C'};
-        char[] arr1 = new char[]{'I', 'P', 'H', 'O', 'N', 'E'};
 
+
+        char[] arr1 = new char[]{'C', 'I','V','I','C'};
         boolean result = isPalindrome(arr1);
         System.out.println("Result 1: " +result);
+
+        char[] arr2 = new char[]{'I', 'P', 'H', 'O', 'N', 'E'};
         boolean result2 = isPalindrome(arr2);
         System.out.println("Result 2: " +result2);
 
