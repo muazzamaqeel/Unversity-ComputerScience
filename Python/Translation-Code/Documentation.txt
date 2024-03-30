@@ -1,0 +1,44 @@
+1. Open PowerShell.
+   - Start by opening the PowerShell interface on your Windows system.
+
+2. Navigate to Your Project Directory.
+   - Use the `cd` command to change your current directory to where your virtual environment is located:
+   ```
+   cd C:\programming\Unversity-ComputerScience\Python\Translation-Code
+   ```
+
+3. Activate Your Virtual Environment.
+   - Activate the virtual environment by running the activation script in PowerShell:
+   ```
+   .\venv\Scripts\Activate.ps1
+   ```
+
+4. Install Jupyter Notebook (if not already installed).
+   - With the virtual environment activated, use `pip` to install the Jupyter Notebook package:
+   ```
+   pip install notebook
+   ```
+
+5. Start the Jupyter Notebook Server.
+   - Launch Jupyter Notebook with the following command:
+   ```
+   jupyter notebook
+   ```
+
+6. Access Jupyter Notebook.
+   - Jupyter will start a local server and should automatically open your default web browser to the Jupyter interface. If it doesn't open automatically, you can manually open a browser and go to the provided local URL (usually `http://localhost:8888/` or similar).
+
+7. Open Your Notebook.
+   - Within the Jupyter interface, navigate to and click on `TranslationCode.ipynb` to open your Jupyter notebook.
+
+8. Trust the Notebook (if necessary).
+   - If you see a message saying the notebook is not trusted, you can choose to trust the notebook within the Jupyter interface if required.
+
+9. Interact with Your Notebook.
+   - Run the cells in your notebook as needed by clicking on them and pressing the "Run" button or using `Shift + Enter`.
+
+10. Save Your Notebook.
+    - As you make changes or run cells, remember to save your notebook periodically. Jupyter typically auto-saves, but you can also manually save by clicking on the save icon or using the menu options.
+
+11. Shut Down the Kernel or Server When Done.
+    - When you have finished working with your notebook, you can shut down the individual notebook's kernel or the entire Jupyter server. Use `Control-C` in the PowerShell window where you started Jupyter Notebook to stop the server.
