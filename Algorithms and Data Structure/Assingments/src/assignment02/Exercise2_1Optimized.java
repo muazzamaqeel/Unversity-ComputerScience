@@ -31,7 +31,7 @@ public class Exercise2_1Optimized {
     }
 
     public static void main(String[] args) {
-        TreeSet<String> combinations = nestedBrackets(111);
+        TreeSet<String> combinations = nestedBrackets(12);
         for (String combination : combinations) {
             System.out.println(combination);
         }
