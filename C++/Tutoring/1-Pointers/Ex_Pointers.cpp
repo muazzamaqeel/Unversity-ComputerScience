@@ -4,6 +4,16 @@
 #include <iostream>
 using namespace std;
 
+
+
+
+void increment(int* ptr) {
+    (*ptr)++; // Incrementing the value of 'ptr' 
+	//*ptr=*ptr+1;
+	
+}
+
+
 int main(){
 
 /*Exercise 1
@@ -21,6 +31,16 @@ There are also two integer pointers named ptrA and ptrB. Assign the values of 'a
 	pc =pc+3;
 	
 	cout <<*pc<<' '<< pc[2] <<' '<< pc[5];
+
+
+//Exercise 3
+	int num = 10;
+    std::cout << "Before incrementing: " << num << std::endl;
+    increment(&num); // Passing address of 'num' to the function
+    std::cout << "After incrementing: " << num << std::endl;
+
 	return 0;
-	
+
 }
+
+
