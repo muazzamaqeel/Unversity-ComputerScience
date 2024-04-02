@@ -11,6 +11,7 @@ int main() {
     int var = 20;
     int *ip = &var;
     std::cout << "Basic Pointer Usage: Value of *ip = " << *ip << "\n";
+    std::cout << "\n";
 
    
    
@@ -23,40 +24,44 @@ int main() {
         std::cout << *(p + i) << " "; // Use pointer arithmetic to access array elements
     }
     std::cout << "\n";
+    std::cout << "\n";
 
    
    
    
     // Example 3: Pointers and Strings
-    const char *str = "Hello, World!";
-    std::cout << "Pointers and Strings: " << str << "\n";
-
+    const char *str[] = {"Postion 0","Postion 1"};
+    std::cout << "Pointers and Strings: " << str[1] << "\n";
+    std::cout << "\n";
    
    
    
     // Example 4: Pointers to Pointers
     int **pptr = &ip; // Pointer to a pointer
     std::cout << "Pointers to Pointers: Value available at **pptr = " << **pptr << "\n";
+    std::cout << "\n";
+    std::cout << "\n";
 
     
     
     
-    // Example 5: Dynamic Memory Allocation
+    //Example 5: Dynamic Memory Allocation
     int n = 5;
-    int *dynamicArr = (int*)malloc(n * sizeof(int)); // Dynamically allocated array
-    if(dynamicArr == NULL) {
-        std::cout << "Memory allocation failed\n";
-        return 1; // Exit if memory allocation failed
-    }
+    // Dynamically allocate an array of ints
+    int *dynamicArr = new int[n]; 
+    // Assign values
     for(int i = 0; i < n; i++) {
-        dynamicArr[i] = i + 100; // Assign values
+        dynamicArr[i] = i + 100;
     }
+    // Print the values
     std::cout << "Dynamic Memory Allocation: ";
+    std::cout << "\n";
     for(int i = 0; i < n; i++) {
-        std::cout << dynamicArr[i] << " ";
+        std::cout << dynamicArr[i] <<std::endl;
     }
     std::cout << "\n";
-    free(dynamicArr); 
+    // Free the allocated memory
+    delete[] dynamicArr; 
 
 
 
