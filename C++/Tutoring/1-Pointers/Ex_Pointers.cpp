@@ -43,7 +43,13 @@ After the function execution is complete, deallocate the memory for both pointer
 
 //Advance
 //Exercise 1. 
+
+
 //Write a program in C++ to sort an array using a pointer.
+//int data[]={111,4,1,22,77,11,22};
+
+
+
 
 //Exercise 2. 
 //Write a C++ program to demonstrate how a function returns a pointer.
@@ -125,6 +131,11 @@ and another pointer pptr that points to ptr.
     ptr1 = &temp1;
 	std::cout << "Value of *ptr1: " << *ptr1 << std::endl;
 
+
+
+
+
+	int data[]={111,4,1,22,77,11,22};
 
 	return 0;
 
