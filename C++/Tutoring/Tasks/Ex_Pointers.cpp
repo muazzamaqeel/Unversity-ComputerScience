@@ -48,7 +48,7 @@ After the function execution is complete, deallocate the memory for both pointer
 //Write a program in C++ to sort an array using a pointer.
 //int data[]={111,4,1,22,77,11,22};
 
-
+x
 
 
 //Exercise 2. 
