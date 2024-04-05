@@ -1,8 +1,10 @@
-from flask import Flask, request, render_template_string, redirect, url_for
+from flask import Flask, request, render_template_string
 from docx import Document
-import os
 
 app = Flask(__name__)
+
+# Global variable to keep track of the number of submissions
+submission_count = 0
 
 def load_questions_from_docx(filename):
     try:
@@ -75,10 +77,9 @@ def quiz():
         </html>
     ''', questions=quiz_questions)
 
-
-
 @app.route('/submit', methods=['POST'])
 def submit_quiz():
+    global submission_count
     results = []
     score = 0
     for i, q in enumerate(quiz_questions):
@@ -88,23 +89,37 @@ def submit_quiz():
             score += 1
         results.append({'question': q['question'], 'user_answer': user_answer, 'correct': correct, 'correct_answer': q['answer']})
 
+    # Increment the submission count
+    submission_count += 1
+
     return render_template_string('''
-        <style>
-            .correct { color: green; }
-            .incorrect { color: red; }
-        </style>
-        <h1>Results</h1>
-        {% for result in results %}
-            <p>Q: {{ result.question }}</p>
-            <p class="{{ 'correct' if result.correct else 'incorrect' }}">
-                Your answer: {{ result.user_answer or 'No answer selected' }} - {{ 'Correct' if result.correct else 'Incorrect' }}
-            </p>
-            {% if not result.correct %}
-                <p class="correct">Correct answer: {{ result.correct_answer }}</p>
-            {% endif %}
-        {% endfor %}
-        <h2>Your Score: {{ score }}/{{ total }}</h2>
-    ''', results=results, total=len(quiz_questions))
+        <html>
+            <head>
+                <style>
+                    .correct { color: green; }
+                    .incorrect { color: red; }
+                </style>
+            </head>
+            <body>
+                <h1>Results</h1>
+                {% for result in results %}
+                    <p>Q: {{ result.question }}</p>
+                    <p class="{{ 'correct' if result.correct else 'incorrect' }}">
+                        Your answer: {{ result.user_answer or 'No answer selected' }} - {{ 'Correct' if result.correct else 'Incorrect' }}
+                    </p>
+                    {% if not result.correct %}
+                        <p class="correct">Correct answer: {{ result.correct_answer }}</p>
+                    {% endif %}
+                {% endfor %}
+                <h2>Your Score: {{ score }}/{{ total }}</h2>
+                <p>Total Submissions: {{ submission_count }}</p> <!-- Display total submissions -->
+            </body>
+        </html>
+    ''', results=results, total=len(quiz_questions), submission_count=submission_count)
+
+@app.route('/submissions', methods=['GET'])
+def show_submissions():
+    return f'<h1>Total Submissions: {submission_count}</h1>'
 
 if __name__ == '__main__':
     app.run(debug=True)
