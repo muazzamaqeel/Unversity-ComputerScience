@@ -1,0 +1,49 @@
+from docx import Document
+
+class Quiz:
+    def __init__(self):
+        self.questions = []
+
+    def load_questions_from_docx(self, filename):
+        doc = Document(filename)
+        for para in doc.paragraphs:
+            text = para.text.strip()
+            if text:  # Skip empty lines
+                # Assuming each paragraph is a new question in the format "Question? a) option1 b) option2 c) option3 d) option4"
+                parts = text.split('?')
+                question = parts[0].strip()
+                options = parts[1].strip().split(' ')
+                correct_option = options[-1]  # Assuming the correct option is mentioned last in the line
+                self.questions.append({'question': question, 'options': options[:-1], 'answer': correct_option})
+
+    def take_quiz(self):
+        score = 0
+        for q in self.questions:
+            print(q['question'])
+            for option in q['options']:
+                print(option)
+            answer = input("Your answer (a, b, c, d): ").strip().lower()
+            if answer == q['answer']:
+                score += 1
+                print("Correct!")
+            else:
+                print("Wrong! The correct answer is:", q['answer'])
+            print()
+        print(f"Quiz finished! Your score is {score}/{len(self.questions)}")
+
+def teacher_interface():
+    quiz = Quiz()
+    filename = input("Enter the filename of the Word document with questions: ")
+    quiz.load_questions_from_docx(filename)
+    return quiz
+
+def student_interface(quiz):
+    quiz.take_quiz()
+
+# Main program flow
+if __name__ == "__main__":
+    print("Welcome to the Quiz Application!")
+    action = input("Are you a Teacher (t) or a Student (s)? ").strip().lower()
+    if action == 't':
+        quiz = teacher_interface()
+   
