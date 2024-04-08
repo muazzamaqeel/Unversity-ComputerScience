@@ -34,37 +34,81 @@ quiz_questions = load_questions_from_docx(file_path)
 @app.route('/')
 def quiz():
     return render_template_string('''
-        <html>
-            <head>
-                <style>
-                    select { display: block; margin-bottom: 10px; }
-                    .correct { color: green; }
-                    .incorrect { color: red; }
-                </style>
-                <script>
-                    function validateForm() {
-                        var all_answered = true;
-                        {% for q in questions %}
-                        var selector = document.getElementById('question{{ loop.index }}');
-                        if (selector.value == "") {
-                            all_answered = false;
-                            break;
-                        }
-                        {% endfor %}
-                        if (!all_answered) {
-                            alert('Please answer all questions before submitting.');
-                            return false;
-                        }
-                        return true;
+    <html>
+        <head>
+            <style>
+                body {
+                    background-image: url("https://i.ibb.co/kcCBtZ9/37fc8304-65b6-48f5-bb84-ce25bdba58a3.jpg");
+                    background-size: cover; /* Cover the entire page */
+                    background-position: center; /* Center the background image */
+                    background-attachment: fixed; /* Prevent the background from scrolling with the page */
+                    color: #333; /* Darker text color for readability */
+                }
+                .container {
+                    max-width: 800px; /* Max width for content */
+                    margin: auto; /* Center the content */
+                    padding: 20px; /* Add some padding */
+                }
+                select, input[type="text"], input[type="submit"] {
+                    width: 100%; /* Full width */
+                    padding: 10px;
+                    margin: 10px 0; /* Add some space between form fields */
+                }
+                h1 {
+                    font-size: 5vw; /* Responsive font size */
+                }
+                p, label {
+                    font-size: 1.2rem; /* Larger text for readability */
+                }
+                @media (max-width: 768px) {
+                    h1 {
+                        font-size: 6vw; /* Slightly larger font size on smaller screens */
                     }
-                </script>
-            </head>
-            <body>
-                <h1>Quiz</h1>
+                    p, label {
+                        font-size: 1rem; /* Adjust font size for small devices */
+                    }
+                }
+                @media (max-width: 480px) {
+                    h1 {
+                        font-size: 7vw; /* Larger font size for very small screens */
+                    }
+                    p, label {
+                        font-size: 0.9rem; /* Smaller font size for very small devices */
+                    }
+                }
+            </style>
+            <script>
+                function validateForm() {
+                    var username = document.getElementById('username').value;
+                    if (!username) {
+                        alert('Please enter your Name.');
+                        return false;
+                    }
+                    var all_answered = true;
+                    {% for q in questions %}
+                    var selector = document.getElementById('question{{ loop.index }}');
+                    if (selector.value == "") {
+                        all_answered = false;
+                        break;
+                    }
+                    {% endfor %}
+                    if (!all_answered) {
+                        alert('Please answer all questions before submitting.');
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+        </head>
+        <body>
+            <div class="container">
+                <h1>C++ Short Quiz</h1>
                 <form method="post" action="/submit" onsubmit="return validateForm();">
+                    <label for="username">Name:</label>
+                    <input type="text" id="username" name="username" required>
                     {% for q in questions %}
                     <p>{{ loop.index }}. {{ q.question }}</p>
-                    <select id="question{{ loop.index }}" name="question{{ loop.index }}">
+                    <select id="question{{ loop.index }}" name="question{{ loop.index }}" required>
                         <option value="">Select your answer</option>
                         {% for option in q.options %}
                         <option value="{{ option[:1] }}">{{ option[3:] }}</option>
@@ -73,13 +117,17 @@ def quiz():
                     {% endfor %}
                     <input type="submit" value="Submit">
                 </form>
-            </body>
-        </html>
-    ''', questions=quiz_questions)
+            </div>
+        </body>
+    </html>
+''', questions=quiz_questions)
 
 @app.route('/submit', methods=['POST'])
 def submit_quiz():
     global submission_count
+    username = request.form.get('username')  # Retrieve the username from form data
+    print(f"Form submitted by: {username}")  # Print the username to the terminal
+
     results = []
     score = 0
     for i, q in enumerate(quiz_questions):
@@ -89,33 +137,31 @@ def submit_quiz():
             score += 1
         results.append({'question': q['question'], 'user_answer': user_answer, 'correct': correct, 'correct_answer': q['answer']})
 
-    # Increment the submission count
     submission_count += 1
 
     return render_template_string('''
-        <html>
-            <head>
-                <style>
-                    .correct { color: green; }
-                    .incorrect { color: red; }
-                </style>
-            </head>
-            <body>
-                <h1>Results</h1>
-                {% for result in results %}
-                    <p>Q: {{ result.question }}</p>
-                    <p class="{{ 'correct' if result.correct else 'incorrect' }}">
-                        Your answer: {{ result.user_answer or 'No answer selected' }} - {{ 'Correct' if result.correct else 'Incorrect' }}
-                    </p>
-                    {% if not result.correct %}
-                        <p class="correct">Correct answer: {{ result.correct_answer }}</p>
-                    {% endif %}
-                {% endfor %}
-                <h2>Your Score: {{ score }}/{{ total }}</h2>
-                <p>Total Submissions: {{ submission_count }}</p> <!-- Display total submissions -->
-            </body>
-        </html>
-    ''', results=results, total=len(quiz_questions), submission_count=submission_count)
+<html>
+    <head>
+        <!-- Include the same style block as in the quiz function -->
+    </head>
+    <body>
+        <div class="container">
+            <h1>Results</h1>
+            {% for result in results %}
+                <p>Q: {{ result.question }}</p>
+                <p class="{{ 'correct' if result.correct else 'incorrect' }}">
+                    Your answer: {{ result.user_answer or 'No answer selected' }} - {{ 'Correct' if result.correct else 'Incorrect' }}
+                </p>
+                {% if not result.correct %}
+                    <p class="correct">Correct answer: {{ result.correct_answer }}</p>
+                {% endif %}
+            {% endfor %}
+            <h2>Your Score: {{ score }}/{{ total }}</h2>
+            <p>Total Submissions: {{ submission_count }}</p>
+        </div>
+    </body>
+</html>
+''', results=results, total=len(quiz_questions), submission_count=submission_count)
 
 @app.route('/submissions', methods=['GET'])
 def show_submissions():
