@@ -55,14 +55,15 @@
 // The following C++ code is intended to define a class `Rectangle` with a constructor
 // that initializes its length and width. Identify and correct the errors in the code.
 /*
+#include <iostream>
+using namespace std;
+#include "string.h"
 class Rectangle {
 public:
     int length;
     int width;
 
     Rectangle(int l, int w) {
-        length = l;
-        width = w;
     }
 }
 
@@ -77,6 +78,9 @@ int main() {
 // This C++ code attempts to model a `Car` class with private attributes that are
 // accessible via public methods. Find and fix the mistake in the code.
 /*
+#include <iostream>
+using namespace std;
+#include "string.h"
 class Car {
 private:
     string brand = "Ford";
@@ -103,6 +107,9 @@ int main() {
 // The following C++ program is supposed to create a base class `Animal` and a derived
 // class `Dog` that inherits from `Animal`. Identify and rectify the errors in the inheritance.
 /*
+#include <iostream>
+using namespace std;
+#include "string.h"
 class Animal {
 public:
     void speak() {
@@ -128,6 +135,9 @@ int main() {
 // This code is meant to demonstrate polymorphism with a virtual function in a base
 // class `Shape` and an overridden function in a derived class `Circle`. Correct the mistakes.
 /*
+#include <iostream>
+using namespace std;
+#include "string.h"
 class Shape {
 public:
     void draw() {
@@ -154,6 +164,9 @@ int main() {
 // In this C++ code, a class `Message` is supposed to define a constructor and a destructor
 // that print messages to the console. Find and fix the errors related to the destructor.
 /*
+#include <iostream>
+using namespace std;
+#include "string.h"
 class Message {
 public:
     Message() {
