@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+///Classes and Objects
 class Car {
 public:
     string brand;
@@ -16,6 +18,9 @@ int main() {
     myCar.honk();
     return 0;
 }
+
+
+///Constructor
 /*
 #include <iostream>
 using namespace std;
@@ -36,6 +41,9 @@ int main() {
 }
 */
 
+
+
+///Destructor
 /*
 #include <iostream>
 using namespace std;
@@ -57,6 +65,10 @@ int main() {
 }
 */
 
+
+
+///Inheritance
+
 /*
 #include <iostream>
 using namespace std;
@@ -66,7 +78,7 @@ class Vehicle {
 public:
     string brand = "Ford";
     void honk() {
-        cout << "Tuut, tuut!" << endl;
+        cout << "Beep, Beep!" << endl;
     }
 };
 
@@ -84,6 +96,9 @@ int main() {
 }
 */
 
+
+
+///Polymorphism
 /*
 #include <iostream>
 using namespace std;
@@ -95,10 +110,10 @@ public:
     }
 };
 
-class Pig : public Animal {
+class Cat : public Animal {
 public:
     void animalSound() override {
-        cout << "The pig says: wee wee" << endl;
+        cout << "The cat says: wee wee" << endl;
     }
 };
 
@@ -111,11 +126,11 @@ public:
 
 int main() {
     Animal myAnimal;
-    Pig myPig;
+    Cat myCat;
     Dog myDog;
 
     myAnimal.animalSound();
-    myPig.animalSound();
+    myCat.animalSound();
     myDog.animalSound();
     return 0;
 }
