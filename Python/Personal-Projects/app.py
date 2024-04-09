@@ -27,8 +27,8 @@ def load_questions_from_docx(filename):
         print(f"An error occurred: {e}")
         return []
 
-# Load questions directly from the given file path
-file_path = 'C:\\programming\\Unversity-ComputerScience\\Python\\Personal-Projects\\Server-Data\\2.docx'
+# Loading questions directly from the given file path
+file_path = 'C:\\programming\\Unversity-ComputerScience\\Python\\Personal-Projects\\Server-Data\\1.docx'
 quiz_questions = load_questions_from_docx(file_path)
 
 @app.route('/')

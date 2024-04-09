@@ -12,6 +12,12 @@ public:
 };
 
 int main() {
+
+
+
+    ///Show with an primitive data type
+    
+
     Car myCar;
     myCar.brand = "Toyota1";
     cout << myCar.brand << endl;
