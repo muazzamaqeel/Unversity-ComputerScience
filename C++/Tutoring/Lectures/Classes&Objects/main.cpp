@@ -13,9 +13,19 @@ public:
 
 int main() {
     Car myCar;
-    myCar.brand = "Toyota";
+    myCar.brand = "Toyota1";
     cout << myCar.brand << endl;
     myCar.honk();
+
+    cout << "/////////////////////////////////////////////" << endl;
+
+    Car myCar2;
+    myCar2.brand = "Toyota2";
+    cout << myCar2.brand << endl;
+    myCar2.honk();
+
+
+
     return 0;
 }
 
