@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/ShallowCopy/cmake-build-debug/CMakeFiles/Shallow_Deep_Copy_.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/ShallowCopy/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/ShallowCopy/cmake-build-debug/CMakeFiles/rebuild_cache.dir

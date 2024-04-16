@@ -1,0 +1,17 @@
+# ninja log v5
+0	960	7349797583639761	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+962	1149	7349797585485222	OverloadingOperators.exe	7cd62252ed441d77
+2	463	7349797881780727	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+463	574	7349797882842834	OverloadingOperators.exe	7cd62252ed441d77
+4	455	7349798882465025	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+456	600	7349798883777949	OverloadingOperators.exe	7cd62252ed441d77
+3	565	7349799563418889	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+566	670	7349799564442611	OverloadingOperators.exe	7cd62252ed441d77
+4	625	7349799771979256	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+625	720	7349799772916357	OverloadingOperators.exe	7cd62252ed441d77
+3	413	7349800061723841	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+413	524	7349800062753815	OverloadingOperators.exe	7cd62252ed441d77
+5	592	7349801847467598	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+593	734	7349801848838826	OverloadingOperators.exe	7cd62252ed441d77
+4	442	7349801905321479	CMakeFiles/OverloadingOperators.dir/main.cpp.obj	384e586a5f56a3be
+442	541	7349801906274822	OverloadingOperators.exe	7cd62252ed441d77
