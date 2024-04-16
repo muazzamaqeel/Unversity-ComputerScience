@@ -10,8 +10,8 @@ public:
     }
 
     // Deep copy constructor simplified further
-    Deep(const Deep& source) {
-        int value = *source.data;    // Retrieve the value from the source's data
+    Deep(const Deep& d1) {
+        int value = *d1.data;    // Retrieve the value from the source's data
         data = new int(value);       // Allocate new memory and copy the value
     }
 

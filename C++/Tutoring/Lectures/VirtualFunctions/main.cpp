@@ -2,15 +2,16 @@
 
 class Base {
 public:
-   virtual void show() {
+
+    virtual  void show() override {
         std::cout << "Base class show function called." << std::endl;
     }
-     virtual ~Base() {}
+      ~Base() {}
 };
 
 class Derived : public Base {
 public:
-    void show() override{
+   virtual void show() override {
         std::cout << "Derived class show function called." << std::endl;
     }
 };
@@ -45,6 +46,11 @@ int main() {
     std::cout<<"For a Base Pointer Initialized with the Derived Class:"<<std::endl;
     Obj1->show();
     std::cout<<"------------------------**---------------------------"<<std::endl;
+
+
+    Derived* exam = new Derived;
+    exam->show();
+    ///Derived *Obj12 = static_cast<Derived *>(new Base);
 
 
     return 0;
