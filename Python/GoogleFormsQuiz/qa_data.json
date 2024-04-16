@@ -1,0 +1,92 @@
+[
+    {
+        "question": "1. What is the purpose of a constructor in a class?",
+        "choices": [
+            "a. To initialize an object's properties",
+            "b. To delete an object",
+            "c. To declare a variable",
+            "d. To perform mathematical operations"
+        ]
+    },
+    {
+        "question": "2. What does inheritance enable in object-oriented programming?",
+        "choices": [
+            "a. The process of copying a file",
+            "b. The transmission of properties from one class to another class",
+            "c. Connecting to a database",
+            "d. Creating graphical user interfaces"
+        ]
+    },
+    {
+        "question": "3. What is polymorphism in object-oriented programming?",
+        "choices": [
+            "a. The ability of different classes to respond to the same function call",
+            "b. Changing the data type of a variable",
+            "c. Encrypting data",
+            "d. Writing data to a file"
+        ]
+    },
+    {
+        "question": "4. What is the role of a destructor in a class?",
+        "choices": [
+            "a. To initialize an object's properties",
+            "b. To encrypt an object's properties",
+            "c. To clean up resources when an object is no longer needed",
+            "d. To multiply two numbers"
+        ]
+    },
+    {
+        "question": "5. When defining a class in C++, which keyword is used to declare a private member?",
+        "choices": [
+            "a. public",
+            "b. private",
+            "c. protected",
+            "d. class"
+        ]
+    },
+    {
+        "question": "6. What is the output of calling a virtual function through a base class pointer in C++?",
+        "choices": [
+            "a. The function in the base class is always called",
+            "b. The function in the derived class is called, if it is overridden",
+            "c. The program crashes",
+            "d. None of the above"
+        ]
+    },
+    {
+        "question": "7. How can a derived class call a function of the base class if it has been overridden?",
+        "choices": [
+            "a. By using the scope resolution operator (::)",
+            "b. By declaring the function again in the derived class",
+            "c. By using a special keyword 'super'",
+            "d. It is not possible"
+        ]
+    },
+    {
+        "question": "8. What is the correct way to initialize a class's member variables in C++?",
+        "choices": [
+            "a. Using an assignment operator in the constructor",
+            "b. Using an initialization list in the constructor",
+            "c. By declaring them as public and initializing outside the class",
+            "d. Both a and b are correct"
+        ]
+    },
+    {
+        "question": "9. In C++, which of the following is true about constructors?",
+        "choices": [
+            "a. Constructors can be virtual",
+            "b. Constructors must always be public",
+            "c. A class can have multiple constructors",
+            "d. Constructors are used to destroy objects"
+        ]
+    },
+    {
+        "question": "10. What concept allows classes to have the same interface but different underlying implementations?",
+        "choices": [
+            "a. Encapsulation",
+            "b. Inheritance",
+            "c. Polymorphism",
+            "d. Composition"
+        ]
+    }
+]

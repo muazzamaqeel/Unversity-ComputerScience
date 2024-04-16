@@ -1,0 +1,7 @@
+# ninja log v5
+85	792	7348785168603992	main_autogen/timestamp	271c6dd562e69e2a
+823	6767	7348785228470476	CMakeFiles/main.dir/main.cpp.obj	9f5c4ed03ddf1c89
+85	792	7348785168603992	main_autogen/mocs_compilation.cpp	271c6dd562e69e2a
+85	792	7348785168603992	C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/Custom_HID/build-main-Desktop_Qt_6_6_2_MinGW_64_bit-Debug/main_autogen/timestamp	271c6dd562e69e2a
+85	792	7348785168603992	C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/Custom_HID/build-main-Desktop_Qt_6_6_2_MinGW_64_bit-Debug/main_autogen/mocs_compilation.cpp	271c6dd562e69e2a
+804	3091	7348785185705456	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	67b6450acb57423a

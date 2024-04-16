@@ -1,0 +1,7 @@
+# ninja log v5
+14	230	7348831728996318	Bluetooth_Custom_HID_autogen/timestamp	9e4346774f112ef6
+14	230	7348831728996318	Bluetooth_Custom_HID_autogen/mocs_compilation.cpp	9e4346774f112ef6
+14	230	7348831728996318	C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Bluetooth_Custom_HID_autogen/timestamp	9e4346774f112ef6
+14	230	7348831728996318	C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Bluetooth_Custom_HID_autogen/mocs_compilation.cpp	9e4346774f112ef6
+232	321	7348831730565977	CMakeFiles/Bluetooth_Custom_HID.dir/Bluetooth_Custom_HID_autogen/mocs_compilation.cpp.obj	594625dc8be38e1d
+238	2537	7348831752715627	CMakeFiles/Bluetooth_Custom_HID.dir/main.cpp.obj	d671c6b50443fe8d

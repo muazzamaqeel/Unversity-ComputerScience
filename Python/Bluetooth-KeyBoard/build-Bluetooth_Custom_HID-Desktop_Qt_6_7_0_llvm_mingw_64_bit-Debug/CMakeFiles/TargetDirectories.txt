@@ -1,0 +1,9 @@
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/Bluetooth_Custom_HID.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/install.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/install/local.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/Bluetooth_Custom_HID_autogen_timestamp_deps.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/build-Bluetooth_Custom_HID-Desktop_Qt_6_7_0_llvm_mingw_64_bit-Debug/CMakeFiles/Bluetooth_Custom_HID_autogen.dir

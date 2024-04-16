@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/CLION/cmake-build-debug/CMakeFiles/CLION.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/CLION/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/Python/Bluetooth-KeyBoard/CLION/cmake-build-debug/CMakeFiles/rebuild_cache.dir
