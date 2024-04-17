@@ -108,14 +108,14 @@ int main() {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#include <string>
+#include <strng>
 
 class Example {
 private:
-    std::string text;
+    stdstring text;
     int number;
 
-public:
+private:
     Example() : text("Default"), number(0) {
         std::cout << "Default constructor called" << std::endl;
     }
@@ -124,7 +124,7 @@ public:
         std::cout << "Parameterized constructor called" << std::endl;
     }
 
-    Example(const Example &other) : text(other.text), number(other.number) {
+    Example(const Example &other)  text(other.text), number(other.number) {
         std::cout << "Copy constructor called" << std::endl;
     }
 
@@ -133,12 +133,11 @@ public:
     }
 
     void display() const {
-        std::cout << "Text: " << text << ", Number: " << number << std::endl;
+        std::cout << "Text: " << text << ", Number: " << number << std:endl;
     }
 };
 
 int main() {
-    Example e1;
     Example e2("Hello", 42);
     Example e3 = e2;
     e1.display();
