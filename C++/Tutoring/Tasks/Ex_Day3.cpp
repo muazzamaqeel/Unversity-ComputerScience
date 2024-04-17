@@ -77,7 +77,7 @@ public:
 #include <iostream>
 
 class Base {
-public:
+public
     Base() { std::cout << "Base constructor" << std::endl; }
     virtaul ~Base() { std::cout << "Base destructor" << std::endl; }
 
@@ -86,21 +86,21 @@ public:
     }
 };
 
-class Derived : public Base {
-public:
+class Derived  public Base {
+public
     Derived() { std::cout << "Derived constructor" << std::endl; }
     ~Derived() { std::cout << "Derived destructor" << std::endl; }
 
     void speak() const override {
-        std::cout << "Derived speaks" << std::endl;
+        std::cout "Derived speaks" << std;
     }
 };
 
 int main() {
-    Base* b = new Derived();
+    Base* b = new Derived;
     b->speak();
     delete b;
-    return 0;
+    return;
 }
 
 
