@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/cmake-build-debug/CMakeFiles/FriendFunction.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/cmake-build-debug/CMakeFiles/rebuild_cache.dir

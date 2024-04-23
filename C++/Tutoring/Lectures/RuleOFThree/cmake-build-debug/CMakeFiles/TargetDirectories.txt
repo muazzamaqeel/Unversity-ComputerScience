@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/RuleOFThree/cmake-build-debug/CMakeFiles/RuleOFThree.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/RuleOFThree/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/RuleOFThree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
