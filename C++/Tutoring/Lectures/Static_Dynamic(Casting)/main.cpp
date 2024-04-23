@@ -36,3 +36,14 @@ int main() {
     delete d;
     return 0;
 }
+
+/*
+ *
+- `Base* b` points to a `Base` object, and `Derived* d` points to a `Derived` object.
+- `b` is safely upcasted to `Base* b1` using static casting because `Derived` can be treated as `Base`.
+- `Derived* d1` is downcasted from `b`, but it's unsafe because `b` is not a `Derived` object. This can lead to errors.
+- `Base* b2` is upcasted to `Base*` using dynamic casting, which is overkill but works correctly.
+- `Derived* d2` is downcasted from `b` using dynamic casting, but since `b` is not pointing to a `Derived` object, it returns `nullptr`.
+- Memory for `b` and `d` is deallocated using `delete` to prevent memory leaks.
+ *
+ */
