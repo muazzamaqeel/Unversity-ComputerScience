@@ -80,6 +80,9 @@ int main() {
 }
 
 
+
+///Advnace
+
 ///////////Question 4: Rule of Three
 class StringWrapper {
     char* data;
@@ -91,7 +94,18 @@ public:
 
     // Destructor is missing.
     // Copy constructor is missing.
-    // Copy assignment operator is missing.
+    // Optional - - - - Copy assignment operator is missing.    
+
+
+    //Hint for Copy constructor
+    StringWrapper(const StringWrapper& other) {
+
+        //Somthing is missing here
+
+        strcpy(data, other.data);
+    }
+
+
 };
 
 
