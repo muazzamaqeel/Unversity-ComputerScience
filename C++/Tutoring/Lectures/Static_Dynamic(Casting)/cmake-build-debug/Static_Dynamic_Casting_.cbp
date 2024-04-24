@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp">
+			<Option target="Static_Dynamic_Casting_"/>
+		</Unit>
 		<Unit filename="C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Static_Dynamic(Casting)/main.cpp">
 			<Option target="Static_Dynamic_Casting_"/>
 		</Unit>

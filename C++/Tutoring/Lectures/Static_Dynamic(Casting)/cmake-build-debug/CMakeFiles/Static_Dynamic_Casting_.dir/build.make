@@ -82,19 +82,35 @@ CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\Static_Dynamic(Casting)\main.cpp -o CMakeFiles\Static_Dynamic_Casting_.dir\main.cpp.s
 
+CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj: CMakeFiles/Static_Dynamic_Casting_.dir/flags.make
+CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj: C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp
+CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj: CMakeFiles/Static_Dynamic_Casting_.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\Static_Dynamic(Casting)\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj -MF CMakeFiles\Static_Dynamic_Casting_.dir\C_\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp.obj.d -o CMakeFiles\Static_Dynamic_Casting_.dir\C_\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp.obj -c C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp
+
+CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp > CMakeFiles\Static_Dynamic_Casting_.dir\C_\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp.i
+
+CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp -o CMakeFiles\Static_Dynamic_Casting_.dir\C_\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\FriendFunction\main.cpp.s
+
 # Object files for target Static_Dynamic_Casting_
 Static_Dynamic_Casting__OBJECTS = \
-"CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj"
+"CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj" \
+"CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj"
 
 # External object files for target Static_Dynamic_Casting_
 Static_Dynamic_Casting__EXTERNAL_OBJECTS =
 
 Static_Dynamic_Casting_.exe: CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj
+Static_Dynamic_Casting_.exe: CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj
 Static_Dynamic_Casting_.exe: CMakeFiles/Static_Dynamic_Casting_.dir/build.make
 Static_Dynamic_Casting_.exe: CMakeFiles/Static_Dynamic_Casting_.dir/linklibs.rsp
 Static_Dynamic_Casting_.exe: CMakeFiles/Static_Dynamic_Casting_.dir/objects1.rsp
 Static_Dynamic_Casting_.exe: CMakeFiles/Static_Dynamic_Casting_.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\Static_Dynamic(Casting)\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Static_Dynamic_Casting_.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\programming\Unversity-ComputerScience\C++\Tutoring\Lectures\Static_Dynamic(Casting)\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Static_Dynamic_Casting_.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Static_Dynamic_Casting_.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -128,6 +128,30 @@ Static_Dynamic_Casting_/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Static_Dynamic_Casting_.dir\build.make CMakeFiles/Static_Dynamic_Casting_.dir/build
 .PHONY : Static_Dynamic_Casting_/fast
 
+C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.obj: C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj
+.PHONY : C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.obj
+
+# target to build an object file
+C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Static_Dynamic_Casting_.dir\build.make CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj
+.PHONY : C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj
+
+C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.i: C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.i
+.PHONY : C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.i
+
+# target to preprocess a source file
+C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Static_Dynamic_Casting_.dir\build.make CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.i
+.PHONY : C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.i
+
+C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.s: C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.s
+.PHONY : C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.s
+
+# target to generate assembly for a file
+C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Static_Dynamic_Casting_.dir\build.make CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.s
+.PHONY : C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Static_Dynamic_Casting_
+	@echo ... C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.obj
+	@echo ... C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.i
+	@echo ... C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp" "CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj" "gcc" "CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj.d"
   "C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Static_Dynamic(Casting)/main.cpp" "CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj" "gcc" "CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj.d"
   )
 

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj"
+  "CMakeFiles/Static_Dynamic_Casting_.dir/C_/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FriendFunction/main.cpp.obj.d"
   "CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj"
   "CMakeFiles/Static_Dynamic_Casting_.dir/main.cpp.obj.d"
   "Static_Dynamic_Casting_.exe"
