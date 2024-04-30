@@ -2,6 +2,12 @@
 
 
 
+https://conan.iwr.uni-heidelberg.de/data/teaching/oopfsc_ss2018/slides10.pdf
+https://courses.cs.washington.edu/courses/cse333/18au/lectures/14-c++-templates.pdf
+https://faculty.kutztown.edu/spiegel/CSc402/PowerPoint/FunctorBasics.pdf
+
+
+
 //////////////////////////////
 //////////////////////////////
 Dive into C++ STL Containers
