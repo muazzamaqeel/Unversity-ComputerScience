@@ -33,8 +33,11 @@ public:
 
 void test(){
     Top t[3];
+    cout<<""<<endl;
     A a1;
+    cout<<""<<endl;
     B* b1 = new B();
+    cout<<""<<endl;
     t[1] = a1;
     t[2] = *b1;
     A a2 = a1;
@@ -48,6 +51,7 @@ void test(){
     delete b1;
 }
 
-int main[]{
-
-};
+int main() {
+    test();
+    return 0;
+}
