@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Fractions-PastExams/cmake-build-debug/CMakeFiles/Fractions_PastExams.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Fractions-PastExams/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Fractions-PastExams/cmake-build-debug/CMakeFiles/rebuild_cache.dir
