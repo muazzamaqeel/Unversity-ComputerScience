@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Bridge/cmake-build-debug/CMakeFiles/Bridge.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Bridge/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/Bridge/cmake-build-debug/CMakeFiles/rebuild_cache.dir
