@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FunctionalObjects_Day8",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FunctionalObjects_Day8::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FunctionalObjects_Day8-Debug-7811d31c6a71b283cd5e.json",
+					"name" : "FunctionalObjects_Day8",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FunctionalObjects-Day8/cmake-build-debug",
+		"source" : "C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/FunctionalObjects-Day8"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
