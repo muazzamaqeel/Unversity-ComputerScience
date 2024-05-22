@@ -23,11 +23,9 @@ int main() {
 }
 
 */
-
+/*
 ///Parameters in the lambda function's parameter list () are similar to parameters in regular functions.
 // These parameters are passed to the lambda when it is called, and they can be used within the lambda's body.
-
-/*
 #include <iostream>
 
 int main() {
@@ -52,24 +50,18 @@ int main() {
 
 ///Parameters in the lambda function's parameter list () are similar to parameters in regular functions.
 ///These parameters are passed to the lambda when it is called, and they can be used within the lambda's body.
-
-
 #include <iostream>
-
 int main() {
     // Define a lambda function that takes two parameters
     auto add = [](int a, int b) -> int {
         return a + b;
     };
-
     // Call the lambda function with arguments
     int result = add(2, 3);
-
     // Print the result
     std::cout << "Sum: " << result << std::endl;  // Output: Sum: 5
     //std::cout << a <<std::endl;
     //std::cout << b <<std::endl;
-
     return 0;
 }
 
