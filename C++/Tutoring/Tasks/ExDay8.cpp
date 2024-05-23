@@ -47,7 +47,7 @@ int main() {
     greet();
     return 0;
 }
-// Syntax Error: Missing braces for the lambda function body.
+// Syntax Error: Something is Missing 
 // Corrected code:
 
 
