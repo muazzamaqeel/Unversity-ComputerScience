@@ -1,5 +1,3 @@
-Here are three questions for each chapter related to C++ topics you mentioned, including theory, code-based, and code-fix questions.
-
 ### Wrapper Class
 Theory Question:
 1. Explain the purpose of a wrapper class in C++ and provide a scenario where it might be particularly useful.
