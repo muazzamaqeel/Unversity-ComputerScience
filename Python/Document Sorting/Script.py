@@ -16,6 +16,7 @@ def organize_files():
     files_failed = []
     open_files = []
 
+    
     def move_files():
         nonlocal files_moved, files_failed, open_files
         files_failed.clear()

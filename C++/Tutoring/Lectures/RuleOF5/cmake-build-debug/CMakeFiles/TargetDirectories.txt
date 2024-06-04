@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/RuleOF5/cmake-build-debug/CMakeFiles/RuleOF5.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/RuleOF5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/RuleOF5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
