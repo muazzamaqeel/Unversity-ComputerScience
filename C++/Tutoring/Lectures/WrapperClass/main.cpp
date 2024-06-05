@@ -1,11 +1,11 @@
 #include <iostream>
 
-class IntWrapper {
+class SimpleC {
 private:
     int value;
 public:
     // Constructor
-    IntWrapper(int val) : value(val) {}
+    SimpleC(int val) : value(val) {}
 
     // Getter
     int getValue() const {
@@ -24,7 +24,7 @@ public:
 };
 
 int main() {
-    IntWrapper wrappedInt(42); // Creating an object of IntWrapper with initial value 42
+    SimpleC wrappedInt(42); // Creating an object of IntWrapper with initial value 42
     wrappedInt.display(); // Display the value
 
     wrappedInt.setValue(100); // Set a new value
