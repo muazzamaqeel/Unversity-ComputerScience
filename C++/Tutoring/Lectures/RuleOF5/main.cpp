@@ -1,72 +1,75 @@
 #include <iostream>
+using namespace std;
 
-class Example {
-private:
-    int* data;
-
+class Part {
 public:
-    // Constructor
-    Example(int value) {
-        data = new int(value);
-        std::cout << "Constructor called\n";
-    }
-
-    // Destructor
-    ~Example() {
-        delete data;
-        std::cout << "Destructor called\n";
-    }
-
-    // Copy constructor
-    Example(const Example& other) {
-        data = new int(*other.data);
-        std::cout << "Copy constructor called\n";
-    }
-
-    // Copy assignment operator
-    Example& operator=(const Example& other) {
-        if (this != &other) {
-            delete data;
-            data = new int(*other.data);
-        }
-        std::cout << "Copy assignment operator called\n";
-        return *this;
-    }
-
-    // Move constructor
-    Example(Example&& other) noexcept : data(other.data) {
-            other.data = nullptr;
-            std::cout << "Move constructor called\n";
-    }
-
-    // Move assignment operator
-    Example& operator=(Example&& other) noexcept {
-        if (this != &other) {
-            delete data;
-            data = other.data;
-            other.data = nullptr;
-        }
-        std::cout << "Move assignment operator called\n";
-        return *this;
-    }
-
-    void display() const {
-        if (data)
-            std::cout << "Value: " << *data << std::endl;
-        else
-            std::cout << "Value: null" << std::endl;
-    }
+    Part() { cout << " cPart\n"; }
+    Part(const Part& a) { cout << " copyPart\n"; }
+    ~Part() { cout << " ~Part"; }
 };
 
+class Base {
+private:
+    Part p;
+public:
+    Base() { cout << " cBase\n"; }
+    Base(const Base& b) { cout << " copyBase\n"; }
+    virtual ~Base() { cout << " ~Base"; }
+
+    void method1(Base b) { cout << " m1Base\n"; }
+};
+
+class Child : public Base {
+private:
+    Part* ptrP;
+public:
+    Child() { cout << " cChild\n"; ptrP = 0; }
+    Child(const Child& c) { cout << " copyChild\n"; ptrP = c.ptrP; }
+    ~Child() { cout << " ~Child"; if (ptrP) delete ptrP; }
+
+    void method1(Base b) { cout << " m1Child\n"; }
+    void method1(Base* b) { cout << " m1_Child\n"; b->method1(*b); }
+    void method2() { cout << " m2Child\n"; ptrP = new Part(); }
+};
+
+void test() {
+    Child c1;
+    Child c2 = c1;
+
+    Base b1;
+
+    Base* ptrB = &c2;
+    ptrB->method1(c1);
+
+    ptrB = new Child();
+    static_cast<Child*>(ptrB)->method2();
+
+    c1.method2();
+
+    cout<<""<<endl;
+    cout<<"----------------"<<endl;
+    cout<<""<<endl;
+    delete ptrB;
+    cout<<""<<endl;
+    cout<<"----------------"<<endl;
+    cout<<""<<endl;
+
+    Child* ptrC = &c1;
+    ptrC->method1(&c2);
+
+
+    cout<<""<<endl;
+    cout<<"----------------"<<endl;
+    cout<<""<<endl;
+    delete ptrC;
+    cout<<""<<endl;
+    cout<<"----------------"<<endl;
+    cout<<""<<endl;
+    cout<<"----------------"<<endl;
+    cout<<""<<endl;
+}
+
 int main() {
-    Example obj1(10);         // Constructor
-    Example obj2 = std::move(obj1);  // Move constructor
-    Example obj3(20);         // Constructor
-    obj3 = std::move(obj2);   // Move assignment operator
-
-    obj1.display();
-    obj2.display();
-    obj3.display();
-
+    test();
     return 0;
 }
