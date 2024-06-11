@@ -25,6 +25,10 @@ public:
     bool operator==(const Book& other) const {
         return (title == other.title) && (author == other.author) && (year == other.year);
     }
+        // Overload the != operator
+    bool operator!=(const Book& other) const {
+        return *this != other;
+    }
 
     // Overload the << operator
     friend std::ostream& operator<<(std::ostream& os, const Book& book) {

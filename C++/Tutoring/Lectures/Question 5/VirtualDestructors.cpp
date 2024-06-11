@@ -10,7 +10,7 @@ public:
     } 
 
     // Base class destructor 
-    virtual ~Base() { 
+     virtual ~Base() { 
         cout << "Base destructor" << endl; 
     } 
 }; 
@@ -35,11 +35,13 @@ public:
 
 int main() { 
     // Create a new Derived object and assign its address to a Base class pointer
-    Base* ptr = new Derived(); 
-    delete ptr;
+    Base* ptr = new Base(); 
 
     cout << "----------------" << endl;
-    Base *ptr2 = new Base();
+
+    delete ptr;
+
+    //Base *ptr2 = new Base();
 
     // Deleting the object through the Base class pointer
     // Because the Base class destructor is not virtual, it will not call the Derived class destructor.
