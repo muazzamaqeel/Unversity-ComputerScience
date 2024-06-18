@@ -1,72 +1,47 @@
 #include <iostream>
 using namespace std;
 
-class Part {
+class Top {
 public:
-    Part() { cout << " cPart\n"; }
-    Part(const Part& a) { cout << " copyPart\n"; }
-    ~Part() { cout << " ~Part"; }
+    Top() { cout << " cTop"; }
+    Top(Top& a) { cout << " copyTop"; }
+    ~Top() { cout << " ~Top"; }
+     void doSomething() { cout << " doTop"; }
 };
 
-class Base {
+class A : public Top {
+public:
+    A() { cout << " cA"<<endl; }
+    A(A& a) { cout << " copyA"<<endl; }
+    ~A() { cout << " ~A"<<endl; }
+    void doSomething() { cout << " doA"<<endl; }
+};
+
+class B : public Top {
 private:
-    Part p;
+    Top* ptrTop;
+    A objA;
 public:
-    Base() { cout << " cBase\n"; }
-    Base(const Base& b) { cout << " copyBase\n"; }
-    virtual ~Base() { cout << " ~Base"; }
+    B() { cout << " cB"<<endl; }
+    B(B& a) { cout << " copyB"<<endl; }
+    ~B() { cout << " ~B"; }
 
-    void method1(Base b) { cout << " m1Base\n"; }
+    Top* getptrTop() { return ptrTop; }
+    void setptrTop(Top* t) { ptrTop = t; }
+
+    A getobjA() { return objA; }
+    void setA(A a) { objA = a; }
+    void doSomething() { cout << " CORRECT ONE"; }
+
 };
 
-class Child : public Base {
-private:
-    Part* ptrP;
-public:
-    Child() { cout << " cChild\n"; ptrP = 0; }
-    Child(const Child& c) { cout << " copyChild\n"; ptrP = c.ptrP; }
-    ~Child() { cout << " ~Child"; if (ptrP) delete ptrP; }
-
-    void method1(Base b) { cout << " m1Child\n"; }
-    void method1(Base* b) { cout << " m1_Child\n"; b->method1(*b); }
-    void method2() { cout << " m2Child\n"; ptrP = new Part(); }
-};
 
 void test() {
-    Child c1;
-    Child c2 = c1;
 
-    Base b1;
-
-    Base* ptrB = &c2;
-    ptrB->method1(c1);
-
-    ptrB = new Child();
-    static_cast<Child*>(ptrB)->method2();
-
-    c1.method2();
-
-    cout<<""<<endl;
-    cout<<"----------------"<<endl;
-    cout<<""<<endl;
-    delete ptrB;
-    cout<<""<<endl;
-    cout<<"----------------"<<endl;
-    cout<<""<<endl;
-
-    Child* ptrC = &c1;
-    ptrC->method1(&c2);
+    B* b1;
+    b1->doSomething();
 
 
-    cout<<""<<endl;
-    cout<<"----------------"<<endl;
-    cout<<""<<endl;
-    delete ptrC;
-    cout<<""<<endl;
-    cout<<"----------------"<<endl;
-    cout<<""<<endl;
-    cout<<"----------------"<<endl;
-    cout<<""<<endl;
 }
 
 int main() {

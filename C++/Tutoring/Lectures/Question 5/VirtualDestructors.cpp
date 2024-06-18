@@ -1,8 +1,14 @@
 #include <iostream> 
 using namespace std; 
 
-// Base class 
-class Base { 
+class Test{
+public:
+    Test() { cout << "Test constructor" << endl; }
+   virtual  ~Test() { cout << "Test destructor" << endl; }
+};
+
+class Base: public Test 
+{ 
 public: 
     // Base class constructor 
     Base() { 
@@ -10,7 +16,7 @@ public:
     } 
 
     // Base class destructor 
-     virtual ~Base() { 
+    ~Base() { 
         cout << "Base destructor" << endl; 
     } 
 }; 
@@ -33,19 +39,26 @@ public:
     } 
 }; 
 
-int main() { 
-    // Create a new Derived object and assign its address to a Base class pointer
-    Base* ptr = new Base(); 
 
-    cout << "----------------" << endl;
-
+    void test(){
+    //Base Objb1; 
+    cout << "1111111111111111111111111111111" << endl;
+    Base* ptr = new Derived(); 
+    cout << "1111111111111111111111111111111" << endl;
+    Test* B1 = new Derived();
+    cout << "1111111111111111111111111111111" << endl;
+    cout << "-------------" << endl;
+    cout << "-------------" << endl;
     delete ptr;
+    cout << "-------------" << endl;
+    delete B1;
+    cout << "-------------" << endl;
+    
+    }
 
-    //Base *ptr2 = new Base();
 
-    // Deleting the object through the Base class pointer
-    // Because the Base class destructor is not virtual, it will not call the Derived class destructor.
-    // This can lead to resource leak if the Derived class was holding any resources.
+int main() { 
 
+    test();
     return 0; 
 }
