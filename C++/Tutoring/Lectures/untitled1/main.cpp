@@ -1,46 +1,50 @@
 #include <iostream>
-#include <map>
-#include <sstream>
-#include <string>
+using namespace std;
 
+class Part {
+public:
+    Part() { cout << " cPart" << endl; }
+    Part(const Part& a) { cout << " copyPart" << endl; }
+    ~Part() { cout << " ~Part" << endl; }
+};
 
+class Base {
+private:
+    Part p;  // Composition
+public:
+    Base() { cout << " cBase" << endl; }
+    Base(const Base& b) { cout << " copyBase" << endl; }
+    virtual ~Base() { cout << " ~Base" << endl; }
 
-//Get data from user and add in the app
+    void method1(Base b) { cout << " m1Base" << endl; }
+};
 
-int main() {
+class Child : public Base {
+private:
+    Part* ptrP;
+public:
+    Child() { cout << " cChild" << endl; ptrP = 0; }
+    Child(const Child& c) { cout << " copyChild" << endl; ptrP = c.ptrP; }
+    ~Child() { cout << " ~Child" << endl; if (ptrP) delete ptrP; }
 
-    // Create a map to store word counts
-    std::map<int, std::string> data;
+    void method1(Base b) { cout << " m1Child" << endl; }
+    void method1(Base* b) { cout << " m1_Child" << endl; b->method1(*b); }
+    void method2() { cout << " m2Child" << endl; ptrP = new Part(); }
+};
 
-    // Prompt the user for input
-    std::cout <<"Please tell me how many data elements you want to add"<<std::endl;
-    int Number_of_Elements;
-    std::cin >> Number_of_Elements;
+void test() {
+    Child c1;                           // Output: cPart cBase cChild
+    Child c2 = c1;                      // Output: cPart cBase copyChild
+    Base b1;                            // Output: cPart cBase
+    Base* ptrB = &c2;                   // Output: NICHTS (nothing)
+    cout<<"-----------------------------------------"<<endl;
 
-    for (int i=0; i<Number_of_Elements; ++i){
-    std::cout << "Enter your name: ";
-    std::string name;
-    std::cin >> name;
-    data[i] = name;
-    }
+    delete ptrB;
 
-    //Print out the map
-
-    std::map<int, std::string>::iterator loop_var;
-
-    for (loop_var = data.begin(); loop_var != data.end(); ++loop_var) {
-        std::cout << loop_var->second<<std::endl;
-        std::cout << loop_var->first<<std::endl;
-
-    }
 
 }
 
-
-
-
-
-
-
-
-
+int main() {
+    test();
+    return 0;
+}
