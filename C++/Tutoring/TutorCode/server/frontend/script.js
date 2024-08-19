@@ -1,11 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const questionsContainer = document.getElementById('questions-container');
-    const submitBtn = document.getElementById('submit-btn');
+    const questionsTabButton = document.querySelector('.tab-button:first-child');
+    const codingTabButton = document.querySelector('.tab-button:last-child');
 
-    // Fetch questions from the backend
+    const questionsTab = document.getElementById('questions-tab');
+    const codingTab = document.getElementById('coding-tab');
+
+    // Set the default tab to "Quiz Questions"
+    showTab('questions-tab');
+
+    // Event listeners for tab buttons
+    questionsTabButton.addEventListener('click', function() {
+        showTab('questions-tab');
+    });
+
+    codingTabButton.addEventListener('click', function() {
+        showTab('coding-tab');
+    });
+
+    function showTab(tabName) {
+        // Hide both tabs initially
+        questionsTab.style.display = 'none';
+        codingTab.style.display = 'none';
+
+        // Show the selected tab
+        document.getElementById(tabName).style.display = 'block';
+    }
+
+    // Fetch and display quiz questions
     fetch('http://localhost:5000/api/questions')
         .then(response => response.json())
         .then(questions => {
+            const questionsContainer = document.getElementById('questions-container');
             if (questions.length === 0) {
                 questionsContainer.innerHTML = '<p>No questions available.</p>';
                 return;
@@ -45,40 +70,72 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error fetching questions:', error);
+            const questionsContainer = document.getElementById('questions-container');
             questionsContainer.innerHTML = '<p>Error loading questions.</p>';
         });
 
-    // Handle form submission
-    submitBtn.addEventListener('click', function() {
-        const answers = [];
-
-        const questions = document.querySelectorAll('.question');
-        questions.forEach(questionDiv => {
-            const selectedOption = questionDiv.querySelector('input[type="radio"]:checked');
-            if (selectedOption) {
-                answers.push({
-                    questionId: selectedOption.name.split('-')[1],
-                    answer: selectedOption.value
-                });
+    // Fetch and display coding questions
+    fetch('http://localhost:5000/api/coding-questions')
+        .then(response => response.json())
+        .then(codingQuestions => {
+            const codingQuestionsContainer = document.getElementById('coding-questions-container');
+            if (codingQuestions.length === 0) {
+                codingQuestionsContainer.innerHTML = '<p>No coding questions available.</p>';
+                return;
             }
-        });
 
-        console.log('Submitted answers:', answers);
+            codingQuestions.forEach(question => {
+                const codingQuestionDiv = document.createElement('div');
+                codingQuestionDiv.className = 'coding-question';
 
-        // Here you could send the answers to the backend if needed
-        fetch('http://localhost:5000/api/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(answers)
-        }).then(response => response.json())
-        .then(data => {
-            console.log('Submission successful:', data);
-            alert('Your answers have been submitted successfully!');
-        }).catch(error => {
-            console.error('Error submitting answers:', error);
-            alert('There was an error submitting your answers. Please try again.');
+                const questionTitle = document.createElement('h3');
+                questionTitle.textContent = question.text;
+                codingQuestionDiv.appendChild(questionTitle);
+
+                const defaultCode = `#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, World!";\n    return 0;\n}`;
+                
+                const codeEditor = document.createElement('textarea');
+                codeEditor.value = defaultCode; // Set default code
+                codingQuestionDiv.appendChild(codeEditor);
+
+                const compileBtn = document.createElement('button');
+                compileBtn.id = 'compile-btn';
+                compileBtn.textContent = 'Compile and Run';
+                compileBtn.className = 'action-button';
+                compileBtn.addEventListener('click', function() {
+                    const userCode = codeEditor.value.trim();
+                    fetch('http://localhost:5000/api/compile', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ code: userCode, expectedOutput: question.answer })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            if (data.correct) {
+                                alert('Correct Answer!');
+                            } else {
+                                alert('Incorrect Answer. Your output was: ' + data.output);
+                            }
+                        } else {
+                            alert('Compilation Error: ' + data.error);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred during compilation.');
+                    });
+                });
+                codingQuestionDiv.appendChild(compileBtn);
+
+                codingQuestionsContainer.appendChild(codingQuestionDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching coding questions:', error);
+            const codingQuestionsContainer = document.getElementById('coding-questions-container');
+            codingQuestionsContainer.innerHTML = '<p>Error loading coding questions.</p>';
         });
-    });
 });

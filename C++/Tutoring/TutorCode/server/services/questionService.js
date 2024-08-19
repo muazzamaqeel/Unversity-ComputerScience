@@ -1,27 +1,14 @@
-const Question = require('../models/questionModel');
-
 class QuestionService {
   constructor() {
-    this.questions = [];
+      this.questions = [];
   }
 
-  createQuestion({ text, options }) {
-    const question = new Question(text, options);
-    this.questions.push(question);
-    return question;
+  createQuestion(question) {
+      this.questions.push({ ...question, id: Math.random().toString(36).substr(2, 9) });
   }
 
   getQuestions() {
-    return this.questions;
-  }
-
-  addAnswerToQuestion(questionId, answerText) {
-    const question = this.questions.find(q => q.id === questionId);
-    if (question) {
-      question.addAnswer(answerText);
-      return answerText;
-    }
-    return null;
+      return this.questions;
   }
 }
 

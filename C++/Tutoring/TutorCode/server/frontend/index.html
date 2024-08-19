@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Test</title>
+    <title>Student Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <h1>C++ Test</h1>
-        <div id="questions-container">
-            <!-- Questions will be dynamically inserted here -->
+        <h1>Student Quiz</h1>
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('questions-tab')">Quiz Questions</button>
+            <button class="tab-button" onclick="showTab('coding-tab')">Coding Questions</button>
         </div>
-        <button id="submit-btn">Submit Answers</button>
+
+        <div id="questions-tab" class="tab-content">
+            <h2>Quiz Questions</h2>
+            <div id="questions-container">
+                <!-- Quiz questions will be dynamically inserted here -->
+            </div>
+            <button id="submit-btn" class="action-button">Submit Answers</button>
+        </div>
+
+        <div id="coding-tab" class="tab-content" style="display:none;">
+            <h2>Coding Questions</h2>
+            <div id="coding-questions-container">
+                <!-- Coding questions will be dynamically inserted here -->
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

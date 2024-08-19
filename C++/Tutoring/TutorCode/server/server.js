@@ -1,25 +1,23 @@
 const express = require('express');
 const http = require('http');
-const socketIo = require('socket.io');
 const cors = require('cors');
-const questionRoutes = require('./routes/questionRoutes');
 const path = require('path');
 const xlsx = require('xlsx');
+const { exec } = require('child_process');
+const fs = require('fs');
+
 const questionService = require('./services/questionService');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, {
-  cors: {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"]
-  }
-});
 
 app.use(cors());
 app.use(express.json());
 
-// Import questions on server start
+// Load quiz questions from Excel
+const quizFilePath = path.join(__dirname, 'backend', 'excel-files', 'C++Questions.xlsx');
+importQuestionsFromExcel(quizFilePath);
+
 function importQuestionsFromExcel(filePath) {
     const workbook = xlsx.readFile(filePath);
     const sheetName = workbook.SheetNames[0];
@@ -38,34 +36,78 @@ function importQuestionsFromExcel(filePath) {
         }
     });
 
-    console.log("Questions imported on server start.");
+    console.log("Quiz questions imported.");
 }
 
-const filePath = path.join(__dirname, 'backend', 'excel-files', 'C++Questions.xlsx');
-importQuestionsFromExcel(filePath);
+// Load coding questions from Excel
+const codingQuestions = importCodingQuestionsFromExcel(path.join(__dirname, 'backend', 'excel-files', 'CodingQuestions.xlsx'));
 
-// Serve the frontend files from the "frontend" directory
-app.use(express.static(path.join(__dirname, 'frontend')));
+function importCodingQuestionsFromExcel(filePath) {
+    const workbook = xlsx.readFile(filePath);
+    const sheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[sheetName];
+    const rows = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
 
-app.use('/api', questionRoutes);
+    const codingQuestions = [];
 
-io.on('connection', (socket) => {
-  console.log('New client connected:', socket.id);
+    rows.forEach((row, index) => {
+        const questionText = row[0];
+        const answerText = row[1];
 
-  socket.on('submitAnswer', ({ questionId, answer }) => {
-    // handle the answer submission
-  });
+        if (typeof questionText === 'string' && typeof answerText === 'string') {
+            codingQuestions.push({
+                text: questionText,
+                answer: answerText
+            });
+        } else {
+            console.log(`Skipping row ${index + 1}: Improper format or insufficient data`);
+        }
+    });
 
-  socket.on('postQuestion', (question) => {
-    // handle the question posting
-  });
+    return codingQuestions;
+}
 
-  socket.on('disconnect', () => {
-    console.log('Client disconnected:', socket.id);
-  });
+// API to get quiz questions
+app.get('/api/questions', (req, res) => {
+    const questions = questionService.getQuestions();
+    res.json(questions);
 });
+
+// API to get coding questions
+app.get('/api/coding-questions', (req, res) => {
+    res.json(codingQuestions);
+});
+
+// API to compile and run C++ code
+app.post('/api/compile', (req, res) => {
+    const { code, expectedOutput } = req.body;
+    
+    // Write the user's code to a temporary file
+    const filePath = path.join(__dirname, 'temp', 'user_code.cpp');
+    fs.writeFileSync(filePath, code);
+
+    // Compile the code
+    exec(`g++ ${filePath} -o ${filePath}.exe`, (compileErr, stdout, stderr) => {
+        if (compileErr) {
+            return res.status(400).json({ success: false, error: stderr });
+        }
+
+        // Run the compiled executable
+        exec(`${filePath}.exe`, (runErr, runStdout, runStderr) => {
+            if (runErr) {
+                return res.status(400).json({ success: false, error: runStderr });
+            }
+
+            const outputCorrect = runStdout.trim() === expectedOutput.trim();
+            res.json({ success: true, correct: outputCorrect, output: runStdout });
+        });
+    });
+});
+
+// Serve the frontend files
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
