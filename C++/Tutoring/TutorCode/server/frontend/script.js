@@ -102,6 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 compileBtn.id = 'compile-btn';
                 compileBtn.textContent = 'Compile and Run';
                 compileBtn.className = 'action-button';
+
+                const feedbackDiv = document.createElement('div');
+                feedbackDiv.className = 'feedback';
+                codingQuestionDiv.appendChild(compileBtn);
+                codingQuestionDiv.appendChild(feedbackDiv);
+
                 compileBtn.addEventListener('click', function() {
                     const userCode = codeEditor.value.trim();
                     fetch('http://localhost:5000/api/compile', {
@@ -115,20 +121,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(data => {
                         if (data.success) {
                             if (data.correct) {
-                                alert('Correct Answer!');
+                                feedbackDiv.textContent = 'Correct Answer!';
+                                feedbackDiv.className = 'feedback correct';
                             } else {
-                                alert('Incorrect Answer. Your output was: ' + data.output);
+                                feedbackDiv.textContent = 'Incorrect Answer. Your output was: ' + data.output;
+                                feedbackDiv.className = 'feedback incorrect';
                             }
                         } else {
-                            alert('Compilation Error: ' + data.error);
+                            feedbackDiv.textContent = 'Compilation Error: ' + data.error;
+                            feedbackDiv.className = 'feedback incorrect';
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
-                        alert('An error occurred during compilation.');
+                        feedbackDiv.textContent = 'An error occurred during compilation.';
+                        feedbackDiv.className = 'feedback incorrect';
                     });
                 });
-                codingQuestionDiv.appendChild(compileBtn);
 
                 codingQuestionsContainer.appendChild(codingQuestionDiv);
             });
