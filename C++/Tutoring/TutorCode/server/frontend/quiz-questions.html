@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Questions</h1>
+        <form id="quiz-form"></form>
+        <button id="submit-quiz">Submit Answers</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            const response = await fetch('/api/questions');
+            const questions = await response.json();
+            const form = document.getElementById('quiz-form');
+
+            questions.forEach((question, index) => {
+                const questionContainer = document.createElement('div');
+                questionContainer.classList.add('question-container');
+                questionContainer.innerHTML = `
+                    <h2>${index + 1}. ${question.text}</h2>
+                    ${question.options.map((option, i) => `
+                        <div>
+                            <input type="radio" id="q${index}_o${i}" name="q${index}" value="${option}">
+                            <label for="q${index}_o${i}">${option}</label>
+                        </div>
+                    `).join('')}
+                `;
+                form.appendChild(questionContainer);
+            });
+
+            document.getElementById('submit-quiz').addEventListener('click', function() {
+                // Logic for submitting the quiz answers
+            });
+        });
+    </script>
+</body>
+</html>

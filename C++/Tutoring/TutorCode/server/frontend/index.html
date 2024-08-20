@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Quiz</title>
+    <title>Weekly C++ Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Student Quiz</h1>
-        <div class="tabs">
-            <button class="tab-button" onclick="showTab('questions-tab')">Quiz Questions</button>
-            <button class="tab-button" onclick="showTab('coding-tab')">Coding Questions</button>
+    <div id="user-info-form" class="container">
+        <h1>Welcome to the Weekly C++ Quiz</h1>
+        <div>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Enter your full name">
         </div>
-
-        <div id="questions-tab" class="tab-content">
-            <h2>Quiz Questions</h2>
-            <div id="questions-container">
-                <!-- Quiz questions will be dynamically inserted here -->
-            </div>
-            <button id="submit-btn" class="action-button">Submit Answers</button>
+        <div>
+            <label for="university-email">University Email</label>
+            <input type="email" id="university-email" placeholder="Enter your university email">
         </div>
-
-        <div id="coding-tab" class="tab-content" style="display:none;">
-            <h2>Coding Questions</h2>
-            <div id="coding-questions-container">
-                <!-- Coding questions will be dynamically inserted here -->
-            </div>
-        </div>
+        <button id="proceed-btn">Proceed</button>
     </div>
+
+    <div id="quiz-options" class="container" style="display: none;">
+        <h1>Welcome to the Weekly C++ Quiz</h1>
+        <p>Hint: Press Ctrl R to refresh the page and come back to the starting page</p>
+        <p>Please select one of the following options:</p>
+        <button id="quiz-btn" class="quiz-option-btn">Quiz Questions</button>
+        <button id="coding-btn" class="quiz-option-btn">Coding Questions</button>
+    </div>
+
+    <div id="quiz-questions" class="container" style="display: none;">
+        <h2>Quiz Questions</h2>
+        <div id="quiz-questions-container"></div>
+        <button id="submit-quiz-btn" class="quiz-option-btn">Submit Answers</button>
+    </div>
+
+    <div id="coding-questions" class="container" style="display: none;">
+        <h2>Coding Questions</h2>
+        <div id="coding-questions-container"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

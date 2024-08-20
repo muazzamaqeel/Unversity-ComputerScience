@@ -1,150 +1,143 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const questionsTabButton = document.querySelector('.tab-button:first-child');
-    const codingTabButton = document.querySelector('.tab-button:last-child');
+// Event listener for the Proceed button
+document.getElementById('proceed-btn').addEventListener('click', function() {
+    const userName = document.getElementById('full-name').value.trim();
+    const userEmail = document.getElementById('university-email').value.trim();
 
-    const questionsTab = document.getElementById('questions-tab');
-    const codingTab = document.getElementById('coding-tab');
-
-    // Set the default tab to "Quiz Questions"
-    showTab('questions-tab');
-
-    // Event listeners for tab buttons
-    questionsTabButton.addEventListener('click', function() {
-        showTab('questions-tab');
-    });
-
-    codingTabButton.addEventListener('click', function() {
-        showTab('coding-tab');
-    });
-
-    function showTab(tabName) {
-        // Hide both tabs initially
-        questionsTab.style.display = 'none';
-        codingTab.style.display = 'none';
-
-        // Show the selected tab
-        document.getElementById(tabName).style.display = 'block';
+    if (!userName || !userEmail) {
+        alert("Please enter both your full name and university email.");
+        return;
     }
 
-    // Fetch and display quiz questions
-    fetch('http://localhost:5000/api/questions')
+    document.getElementById('user-info-form').style.display = 'none';
+    document.getElementById('quiz-options').style.display = 'block';
+});
+
+// Event listener for Quiz Questions button
+document.getElementById('quiz-btn').addEventListener('click', function() {
+    document.getElementById('quiz-questions').style.display = 'block';
+    document.getElementById('coding-questions').style.display = 'none';
+    loadQuizQuestions();
+});
+
+// Event listener for Coding Questions button
+document.getElementById('coding-btn').addEventListener('click', function() {
+    document.getElementById('quiz-questions').style.display = 'none';
+    document.getElementById('coding-questions').style.display = 'block';
+    loadCodingQuestions();
+});
+
+// Fetch and display Quiz Questions
+function loadQuizQuestions() {
+    fetch('/api/questions')
         .then(response => response.json())
         .then(questions => {
-            const questionsContainer = document.getElementById('questions-container');
-            if (questions.length === 0) {
-                questionsContainer.innerHTML = '<p>No questions available.</p>';
-                return;
-            }
-
-            questions.forEach(question => {
-                const questionDiv = document.createElement('div');
-                questionDiv.className = 'question';
-
-                const questionTitle = document.createElement('h3');
-                questionTitle.textContent = question.text;
-                questionDiv.appendChild(questionTitle);
-
-                const optionsList = document.createElement('ul');
-
-                question.options.forEach((option, index) => {
-                    const optionItem = document.createElement('li');
-
-                    const optionInput = document.createElement('input');
-                    optionInput.type = 'radio';
-                    optionInput.name = `question-${question.id}`;
-                    optionInput.value = option;
-                    optionInput.id = `question-${question.id}-option-${index}`;
-
-                    const optionLabel = document.createElement('label');
-                    optionLabel.setAttribute('for', optionInput.id);
-                    optionLabel.textContent = option;
-
-                    optionItem.appendChild(optionInput);
-                    optionItem.appendChild(optionLabel);
-                    optionsList.appendChild(optionItem);
-                });
-
-                questionDiv.appendChild(optionsList);
-                questionsContainer.appendChild(questionDiv);
+            const container = document.getElementById('quiz-questions-container');
+            container.innerHTML = '';
+            questions.forEach((question, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'question-block';
+                questionElement.innerHTML = `
+                    <p>${index + 1}. ${question.text}</p>
+                    ${question.options.map(option => `
+                        <label>
+                            <input type="radio" name="question-${index}" value="${option}"> ${option}
+                        </label>
+                    `).join('<br>')}
+                `;
+                container.appendChild(questionElement);
             });
         })
-        .catch(error => {
-            console.error('Error fetching questions:', error);
-            const questionsContainer = document.getElementById('questions-container');
-            questionsContainer.innerHTML = '<p>Error loading questions.</p>';
-        });
+        .catch(error => console.error('Error loading quiz questions:', error));
+}
 
-    // Fetch and display coding questions
-    fetch('http://localhost:5000/api/coding-questions')
+// Fetch and display Coding Questions
+function loadCodingQuestions() {
+    fetch('/api/coding-questions')
         .then(response => response.json())
-        .then(codingQuestions => {
-            const codingQuestionsContainer = document.getElementById('coding-questions-container');
-            if (codingQuestions.length === 0) {
-                codingQuestionsContainer.innerHTML = '<p>No coding questions available.</p>';
-                return;
-            }
+        .then(questions => {
+            const container = document.getElementById('coding-questions-container');
+            container.innerHTML = '';
+            questions.forEach((question, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'question-block';
+                questionElement.innerHTML = `
+                    <p>${index + 1}. ${question.text}</p>
+                    <textarea id="code-${index}" class="code-editor">// Your code here\n\n${question.template}</textarea>
+                    <button class="btn compile-btn" data-index="${index}" data-answer="${question.answer}">Compile and Run</button>
+                    <div id="result-${index}" class="result-container"></div>
+                `;
+                container.appendChild(questionElement);
+            });
 
-            codingQuestions.forEach(question => {
-                const codingQuestionDiv = document.createElement('div');
-                codingQuestionDiv.className = 'coding-question';
-
-                const questionTitle = document.createElement('h3');
-                questionTitle.textContent = question.text;
-                codingQuestionDiv.appendChild(questionTitle);
-
-                const defaultCode = `#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, World!";\n    return 0;\n}`;
-                
-                const codeEditor = document.createElement('textarea');
-                codeEditor.value = defaultCode; // Set default code
-                codingQuestionDiv.appendChild(codeEditor);
-
-                const compileBtn = document.createElement('button');
-                compileBtn.id = 'compile-btn';
-                compileBtn.textContent = 'Compile and Run';
-                compileBtn.className = 'action-button';
-
-                const feedbackDiv = document.createElement('div');
-                feedbackDiv.className = 'feedback';
-                codingQuestionDiv.appendChild(compileBtn);
-                codingQuestionDiv.appendChild(feedbackDiv);
-
-                compileBtn.addEventListener('click', function() {
-                    const userCode = codeEditor.value.trim();
-                    fetch('http://localhost:5000/api/compile', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ code: userCode, expectedOutput: question.answer })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            if (data.correct) {
-                                feedbackDiv.textContent = 'Correct Answer!';
-                                feedbackDiv.className = 'feedback correct';
-                            } else {
-                                feedbackDiv.textContent = 'Incorrect Answer. Your output was: ' + data.output;
-                                feedbackDiv.className = 'feedback incorrect';
-                            }
-                        } else {
-                            feedbackDiv.textContent = 'Compilation Error: ' + data.error;
-                            feedbackDiv.className = 'feedback incorrect';
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        feedbackDiv.textContent = 'An error occurred during compilation.';
-                        feedbackDiv.className = 'feedback incorrect';
-                    });
+            // Attach event listeners for compile buttons
+            document.querySelectorAll('.compile-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    const userCode = document.getElementById(`code-${index}`).value;
+                    const expectedOutput = this.getAttribute('data-answer');
+                    compileCode(userCode, expectedOutput, index);
                 });
-
-                codingQuestionsContainer.appendChild(codingQuestionDiv);
             });
         })
-        .catch(error => {
-            console.error('Error fetching coding questions:', error);
-            const codingQuestionsContainer = document.getElementById('coding-questions-container');
-            codingQuestionsContainer.innerHTML = '<p>Error loading coding questions.</p>';
-        });
+        .catch(error => console.error('Error loading coding questions:', error));
+}
+
+// Function to compile code and show the result
+function compileCode(code, expectedOutput, index) {
+    fetch('/api/compile', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ code, expectedOutput }),
+    })
+    .then(response => response.json())
+    .then(result => {
+        const resultContainer = document.getElementById(`result-${index}`);
+        if (result.success) {
+            if (result.isCorrect) {
+                resultContainer.textContent = 'Correct Answer!';
+                resultContainer.style.color = 'green';
+            } else {
+                resultContainer.textContent = `Incorrect Answer. Your output was: ${result.output}`;
+                resultContainer.style.color = 'red';
+            }
+        } else {
+            resultContainer.textContent = `Error: ${result.error}`;
+            resultContainer.style.color = 'red';
+        }
+    })
+    .catch(error => console.error('Error compiling code:', error));
+}
+
+// Function to handle quiz submission
+document.getElementById('submit-quiz-btn').addEventListener('click', function() {
+    const answers = [];
+    const userName = document.getElementById('full-name').value;
+    const userEmail = document.getElementById('university-email').value;
+
+    document.querySelectorAll('[name^="question-"]').forEach((input, index) => {
+        if (input.checked) {
+            answers.push(input.value);
+        } else if (!answers[index]) {
+            answers.push(null);
+        }
+    });
+
+    fetch('/api/submit-quiz', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userName, userEmail, answers }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+        } else {
+            alert('Error submitting quiz: ' + data.message);
+        }
+    })
+    .catch(error => console.error('Error submitting quiz:', error));
 });

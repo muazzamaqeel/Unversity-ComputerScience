@@ -12,7 +12,9 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "docx": "^8.5.0",
     "express": "^4.19.2",
+    "nodemailer": "^6.9.14",
     "socket.io": "^4.7.5",
     "xlsx": "^0.18.5"
   }

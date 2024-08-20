@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coding Questions</h1>
+        <div id="coding-questions-container"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            const response = await fetch('/api/coding-questions');
+            const questions = await response.json();
+            const container = document.getElementById('coding-questions-container');
+
+            questions.forEach((question, index) => {
+                const questionContainer = document.createElement('div');
+                questionContainer.classList.add('coding-question-container');
+                questionContainer.innerHTML = `
+                    <h2>${index + 1}. ${question.text}</h2>
+                    <textarea id="code-editor-${index}" rows="10" cols="50">${question.template}</textarea>
+                    <button onclick="compileCode(${index}, '${question.answer}')">Compile and Run</button>
+                    <div id="result-${index}" class="result-container"></div>
+                `;
+                container.appendChild(questionContainer);
+            });
+        });
+
+        function compileCode(index, expectedOutput) {
+            const code = document.getElementById(`code-editor-${index}`).value;
+            fetch('/api/compile', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code, expectedOutput }),
+            }).then(response => response.json()).then(data => {
+                const resultContainer = document.getElementById(`result-${index}`);
+                resultContainer.innerText = data.correct ? "Correct Answer!" : `Incorrect Answer. Your output was: ${data.output}`;
+            });
+        }
+    </script>
+</body>
+</html>

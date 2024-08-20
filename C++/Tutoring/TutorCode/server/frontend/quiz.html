@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz & Coding Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz & Coding Questions</h1>
+        <div class="button-container">
+            <button id="quiz-button">Quiz Questions</button>
+            <button id="coding-button">Coding Questions</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('quiz-button').addEventListener('click', function() {
+            window.location.href = 'quiz-questions.html';
+        });
+
+        document.getElementById('coding-button').addEventListener('click', function() {
+            window.location.href = 'coding-questions.html';
+        });
+    </script>
+</body>
+</html>

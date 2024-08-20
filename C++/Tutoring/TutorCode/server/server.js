@@ -5,6 +5,8 @@ const path = require('path');
 const xlsx = require('xlsx');
 const { exec } = require('child_process');
 const fs = require('fs');
+const nodemailer = require('nodemailer');
+const docx = require('docx');
 
 const questionService = require('./services/questionService');
 
@@ -14,7 +16,6 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 
-// Load quiz questions from Excel
 const quizFilePath = path.join(__dirname, 'backend', 'excel-files', 'C++Questions.xlsx');
 importQuestionsFromExcel(quizFilePath);
 
@@ -57,6 +58,7 @@ function importCodingQuestionsFromExcel(filePath) {
         if (typeof questionText === 'string' && typeof answerText === 'string') {
             codingQuestions.push({
                 text: questionText,
+                template: `#include <iostream>\nusing namespace std;\n\n// Your code here\n\nint main() {\n    cout << "Hello, World!";\n    return 0;\n}`,
                 answer: answerText
             });
         } else {
@@ -82,24 +84,21 @@ app.get('/api/coding-questions', (req, res) => {
 app.post('/api/compile', (req, res) => {
     const { code, expectedOutput } = req.body;
     
-    // Write the user's code to a temporary file
-    const filePath = path.join(__dirname, 'temp', 'user_code.cpp');
+    const filePath = path.join(__dirname, 'temp', `user_code_${Date.now()}.cpp`);
     fs.writeFileSync(filePath, code);
 
-    // Compile the code
     exec(`g++ ${filePath} -o ${filePath}.exe`, (compileErr, stdout, stderr) => {
         if (compileErr) {
             return res.status(400).json({ success: false, error: stderr });
         }
 
-        // Run the compiled executable
         exec(`${filePath}.exe`, (runErr, runStdout, runStderr) => {
             if (runErr) {
                 return res.status(400).json({ success: false, error: runStderr });
             }
 
             const outputCorrect = runStdout.trim() === expectedOutput.trim();
-            res.json({ success: true, correct: outputCorrect, output: runStdout });
+            res.json({ success: true, isCorrect: outputCorrect, output: runStdout.trim() });
         });
     });
 });
