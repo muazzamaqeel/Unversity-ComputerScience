@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|c:\\programming\\unversity-computerscience\\c#\\personal-learnings\\classes and objects\\introduction\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|c:\\programming\\unversity-computerscience\\c#\\personal-learnings\\classes and objects\\introduction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|c:\\programming\\unversity-computerscience\\c#\\personal-learnings\\classes and objects\\introduction\\smallgui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|solutionrelative:smallgui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|c:\\programming\\unversity-computerscience\\c#\\personal-learnings\\classes and objects\\introduction\\smallgui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E4E504FB-D2FC-45F2-9C4D-999B1D69BDFF}|Introduction.csproj|solutionrelative:smallgui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,35 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAMAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T10:57:03.256Z",
+              "WhenOpened": "2024-08-26T09:39:02.249Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 356,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\Game.cs",
-              "RelativeDocumentMoniker": "Game.cs",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\Game.cs",
-              "RelativeToolTip": "Game.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "SmallGUI.Designer.cs",
+              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\SmallGUI.Designer.cs",
+              "RelativeDocumentMoniker": "SmallGUI.Designer.cs",
+              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\SmallGUI.Designer.cs",
+              "RelativeToolTip": "SmallGUI.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T10:58:51.705Z",
+              "WhenOpened": "2024-08-26T09:37:10.816Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SmallGUI.cs [Design]",
+              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\SmallGUI.cs",
+              "RelativeDocumentMoniker": "SmallGUI.cs",
+              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C#\\Personal-Learnings\\Classes and Objects\\Introduction\\SmallGUI.cs [Design]",
+              "RelativeToolTip": "SmallGUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T09:27:07.838Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
