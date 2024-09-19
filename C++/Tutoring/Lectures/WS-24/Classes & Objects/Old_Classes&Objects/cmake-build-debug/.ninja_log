@@ -1,0 +1,13 @@
+# ninja log v5
+0	1543	7343563037172012	CMakeFiles/Classes_Objects.dir/main.cpp.obj	39b776a471d2d761
+1548	1841	7343563039985487	Classes_Objects.exe	33722a2b56728ea5
+4	833	7343565101583851	CMakeFiles/Classes_Objects.dir/main.cpp.obj	39b776a471d2d761
+834	973	7343565102951724	Classes_Objects.exe	33722a2b56728ea5
+27	3329	7343569627457642	CMakeFiles/Classes_Objects.dir/main.cpp.obj	39b776a471d2d761
+3330	3808	7343569632196271	Classes_Objects.exe	33722a2b56728ea5
+5	1150	7343569886850384	CMakeFiles/Classes_Objects.dir/main.cpp.obj	39b776a471d2d761
+1151	1323	7343569888557178	Classes_Objects.exe	33722a2b56728ea5
+4	1085	7343569991961770	CMakeFiles/Classes_Objects.dir/main.cpp.obj	39b776a471d2d761
+1086	1247	7343569993524197	Classes_Objects.exe	33722a2b56728ea5
+5	1174	7343570508414209	CMakeFiles/Classes_Objects.dir/main.cpp.obj	39b776a471d2d761
+1175	1320	7343570509813003	Classes_Objects.exe	33722a2b56728ea5
