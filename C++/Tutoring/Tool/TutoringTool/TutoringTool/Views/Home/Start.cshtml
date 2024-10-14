@@ -1,0 +1,10 @@
+﻿@model string
+
+<h1>Welcome to C++ Tutoring Tool</h1>
+<p>Please enter your name (optional):</p>
+
+<form asp-controller="Home" asp-action="Index" method="get">
+    <input type="text" name="userName" placeholder="Your Name" />
+    <br /><br />
+    <button type="submit">Start</button>
+</form>

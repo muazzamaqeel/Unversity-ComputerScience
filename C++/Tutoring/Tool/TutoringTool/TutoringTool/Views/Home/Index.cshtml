@@ -1,0 +1,37 @@
+﻿@model List<TutoringTool.Services.Question>
+
+<h1>C++ Programming Questions</h1>
+
+@if (!string.IsNullOrEmpty(ViewBag.UserName))
+{
+        <p>Hello, @ViewBag.UserName! Good luck with the quiz.</p>
+}
+
+@{
+    int index = 0; // Unique index for each question
+}
+
+@foreach (var question in Model)
+{
+        <div class="question-container">
+            <div class="code-editor">
+                <h2>@question.Text</h2>
+                <textarea id="codeEditor_@index" rows="10" cols="50">
+    #include &lt;iostream&gt;
+
+    int main() {
+        std::cout &lt;&lt; "Hello World!";
+        return 0;
+    }
+                </textarea>
+                <br />
+                <button onclick="runCode('@index')">Run</button>
+            </div>
+            <div class="code-output">
+                <h4>Output</h4>
+                <div id="output_@index" class="output-box">Waiting for result...</div>
+            </div>
+        </div>
+        <br />
+    index++; // Increment index for each question
+}
