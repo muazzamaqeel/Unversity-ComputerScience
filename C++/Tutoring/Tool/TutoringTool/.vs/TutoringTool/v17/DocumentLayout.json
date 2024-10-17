@@ -3,44 +3,12 @@
   "WorkspaceRootPath": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\views\\home\\start.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\views\\home\\start.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\services\\questionloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\services\\questionloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|c:\\programming\\unversity-computerscience\\c\u002B\u002B\\tutoring\\tool\\tutoringtool\\tutoringtool\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E9048926-CA81-48C8-BA57-AC36CE675AF0}|TutoringTool\\TutoringTool.csproj|solutionrelative:tutoringtool\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,132 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "TutoringTool\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "TutoringTool\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-14T20:20:34.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Program.cs",
-              "RelativeDocumentMoniker": "TutoringTool\\Program.cs",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Program.cs",
-              "RelativeToolTip": "TutoringTool\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T20:18:38.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Startup.cs",
-              "RelativeDocumentMoniker": "TutoringTool\\Startup.cs",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Startup.cs",
-              "RelativeToolTip": "TutoringTool\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T20:18:28.073Z",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TutoringTool\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TutoringTool\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-17T12:01:20.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "TutoringTool\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "TutoringTool\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-14T20:13:28.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Start.cshtml",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Views\\Home\\Start.cshtml",
-              "RelativeDocumentMoniker": "TutoringTool\\Views\\Home\\Start.cshtml",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Views\\Home\\Start.cshtml",
-              "RelativeToolTip": "TutoringTool\\Views\\Home\\Start.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-14T20:10:10.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "TutoringTool\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "TutoringTool\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAcwFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T19:59:07.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "QuestionLoader.cs",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Services\\QuestionLoader.cs",
-              "RelativeDocumentMoniker": "TutoringTool\\Services\\QuestionLoader.cs",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Services\\QuestionLoader.cs",
-              "RelativeToolTip": "TutoringTool\\Services\\QuestionLoader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T19:57:28.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "site.js",
               "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "TutoringTool\\wwwroot\\js\\site.js",
               "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\wwwroot\\js\\site.js",
               "RelativeToolTip": "TutoringTool\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-14T19:54:31.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\appsettings.json",
-              "RelativeDocumentMoniker": "TutoringTool\\appsettings.json",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\appsettings.json",
-              "RelativeToolTip": "TutoringTool\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-14T19:54:19.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "TutoringTool\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\programming\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Tool\\TutoringTool\\TutoringTool\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "TutoringTool\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-14T19:53:48.835Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-17T12:01:08.403Z",
               "EditorCaption": ""
             }
           ]

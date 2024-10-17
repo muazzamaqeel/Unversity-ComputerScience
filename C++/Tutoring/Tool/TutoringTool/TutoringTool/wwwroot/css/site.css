@@ -4,8 +4,22 @@ html, body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f9;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
     color: #333;
+    min-height: 100%; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make sure the content grows and pushes the footer down */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1; /* Make the main content grow to push the footer down */
 }
 
 /* Flexbox layout for questions and outputs */
@@ -32,13 +46,19 @@ textarea {
     height: 200px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     font-size: 16px;
     font-family: 'Courier New', monospace;
-    color: #333;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #2d3436;
+    background-color: #f0f4f7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+    textarea:focus {
+        border-color: #74b9ff;
+        box-shadow: 0 0 8px rgba(116, 185, 255, 0.7);
+    }
 
 /* Code output styling */
 .code-output {
@@ -47,12 +67,14 @@ textarea {
     background-color: #f9f9f9;
     border-left: 3px solid #258cfb;
     font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f0f4f7;
 }
 
 .output-box {
     white-space: pre-wrap;
     background-color: #eef;
-    padding: 10px;
+    padding: 15px;
     min-height: 100px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -64,40 +86,42 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37, 140, 251, 0.2);
 }
 
     button:hover {
         background-color: #1b6fb2;
+        box-shadow: 0 6px 20px rgba(37, 140, 251, 0.3);
     }
 
     button:focus {
         outline: none;
-        box-shadow: 0 0 5px rgba(37, 140, 251, 0.5);
+        box-shadow: 0 0 10px rgba(37, 140, 251, 0.5);
     }
 
 /* Footer styling */
-    footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-        color: #aaa;
-        background-color: #222;
-        width: 100%;
-        position: relative; /* Change this from fixed to relative */
-    }
-
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #666;
+    background-color: #f7f7f7;
+    width: 100%;
+    border-top: 1px solid #dfe6e9;
+    margin-top: auto; /* Push footer to bottom */
+}
 
     footer a {
-        color: #fff;
+        color: #258cfb;
         text-decoration: none;
     }
 
         footer a:hover {
-            color: #258cfb;
+            color: #74b9ff;
         }
 
 /* Media queries for responsiveness */
