@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Operator Overloading\\Attempt2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD313387-B7B4-4407-B843-F0522D2ACE0A}|Attempt2.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Operator Overloading\\Attempt2\\Attempt2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DD313387-B7B4-4407-B843-F0522D2ACE0A}|Attempt2.vcxproj|solutionrelative:Attempt2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 214,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Attempt2.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Operator Overloading\\Attempt2\\Attempt2.cpp",
+              "RelativeDocumentMoniker": "Attempt2.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Operator Overloading\\Attempt2\\Attempt2.cpp*",
+              "RelativeToolTip": "Attempt2.cpp*",
+              "ViewState": "AgIAADYAAAAAAAAAAAAhwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-28T12:43:06.363Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
