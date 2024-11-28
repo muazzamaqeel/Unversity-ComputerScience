@@ -1,7 +1,7 @@
 #include <iostream>
-
+using namespace std;
 class Point {
-private:
+public:
     int x, y;
 
 public:
@@ -38,13 +38,46 @@ public:
         return temp;
     }
 
+    /// Overloads the - operator to subtract two Point objects.
+    Point operator-(const Point& other) const {
+        Point temp;
+        temp.x = x - other.x;
+        temp.y = y - other.y;
+        return temp;
+    }
+
+    /// Overloads the * operator to multiply two Point objects (element-wise).
+    Point operator*(const Point& other) const {
+        Point temp;
+        temp.x = x * other.x;
+        temp.y = y * other.y;
+        return temp;
+    }
+
+    // Overloads the << operator to print Point objects.
+	// The reason we need to have this function as a friend becasue LHS is ostream and its not a member of Point class
+	// Friend functions allows to access private members of the class
+    // << does not belong to the class member functions, and that's why it is implemented outside the class. 
+	// Because << needs be used outside the class, it needs to be a friend function.
+    
+    friend ostream& operator<<(ostream& os, const Point& point) {
+        os << "(" << point.x << ", " << point.y << ")";
+        return os;
+    }
+    
+
     // Method to display the point
     void display() const {
         std::cout << "(" << x << ", " << y << ")\n";
     }
 };
 
-
+/*
+std::ostream& operator<<(std::ostream& os, const Point& point) {
+    os << "(" << point.x << ", " << point.y << ")";
+    return os;
+}
+*/
 int main() {
     Point p1(3, 4);
     Point p2(1, 2);
@@ -59,6 +92,9 @@ int main() {
 
     std::cout << "Point 3 (p1 + p2): ";
     p3.display();
+
+    std::cout << "Point 1: " << p1 << std::endl;
+    std::cout << "Point 2: " << p2 << std::endl;
 
     return 0;
 }
