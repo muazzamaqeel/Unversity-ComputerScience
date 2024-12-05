@@ -1,0 +1,3 @@
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/WS-24/Mini Projects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/WS-24/Mini Projects/untitled1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/programming/Unversity-ComputerScience/C++/Tutoring/Lectures/WS-24/Mini Projects/untitled1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
