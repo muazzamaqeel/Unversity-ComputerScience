@@ -1,3 +1,0 @@
-C:/Users/muazz/CLionProjects/untitled49/cmake-build-debug/CMakeFiles/untitled49.dir
-C:/Users/muazz/CLionProjects/untitled49/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/muazz/CLionProjects/untitled49/cmake-build-debug/CMakeFiles/rebuild_cache.dir

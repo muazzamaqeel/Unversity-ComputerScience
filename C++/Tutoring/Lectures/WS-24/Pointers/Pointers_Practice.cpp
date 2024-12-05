@@ -82,7 +82,7 @@ int main() {
 
 
 //6. Fix Double Pointer Dereferencing
-Problem: The code is incorrectly dereferencing a single pointer ptr1 instead of the double pointer ptr2.
+//Problem: The code is incorrectly dereferencing a single pointer ptr1 instead of the double pointer ptr2.
 
 
 #include <iostream>
