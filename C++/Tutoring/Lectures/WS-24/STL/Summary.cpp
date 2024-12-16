@@ -18,18 +18,23 @@ int main() {
     std::sort(numbers.begin(), numbers.end());
 
     std::cout << "Sorted numbers: ";
-    for (int num : numbers) {
-        std::cout << num << " ";
+    for (std::vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) {
+        std::cout << *it << " ";
     }
     std::cout << std::endl;
 
     // Step 3: Use std::transform (STL Algorithm) with a functor
     std::vector<int> doubledNumbers(numbers.size());
-    std::transform(numbers.begin(), numbers.end(), doubledNumbers.begin(), Double());
+    Double functorobj;
+    std::transform(numbers.begin(), numbers.end(), doubledNumbers.begin(), functorobj);
+    //Or you can simply use Double() instead of functorobj
+    //The reason why that works is because Double is a functor class and Double() creates a temporary object of the class Double
+
+
 
     std::cout << "Doubled numbers: ";
-    for (int num : doubledNumbers) {
-        std::cout << num << " ";
+    for (std::vector<int>::iterator it = doubledNumbers.begin(); it != doubledNumbers.end(); ++it) {
+        std::cout << *it << " ";
     }
     std::cout << std::endl;
 
