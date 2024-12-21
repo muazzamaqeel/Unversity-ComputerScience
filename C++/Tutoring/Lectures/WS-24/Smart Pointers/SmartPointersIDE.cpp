@@ -9,6 +9,8 @@ void uniquePointerExample() {
 } // uniquePtr is deleted here
 
 void sharedPointerExample() {
+
+    //Make shared means that
     std::shared_ptr<int> sharedPtr1 = std::make_shared<int>(20);
     std::cout << "\n[shared_ptr] Value: " << *sharedPtr1 << std::endl;
 
