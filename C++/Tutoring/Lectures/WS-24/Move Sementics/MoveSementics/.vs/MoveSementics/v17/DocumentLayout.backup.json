@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C38B9BE4-FE9E-4D52-A561-6CCDD3F282AE}|Binder\\Binder.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Binder\\Binder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C38B9BE4-FE9E-4D52-A561-6CCDD3F282AE}|Binder\\Binder.vcxproj|solutionrelative:Binder\\Binder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01DBB4E-475B-4C68-9037-826D49259511}|Functor\\Functor.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Functor\\Functor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E01DBB4E-475B-4C68-9037-826D49259511}|Functor\\Functor.vcxproj|solutionrelative:Functor\\Functor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCF5975E-60DE-442F-AD5A-1120A7A60525}|MoveAssignment\\MoveAssignment.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\MoveAssignment\\MoveAssignment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FCF5975E-60DE-442F-AD5A-1120A7A60525}|MoveAssignment\\MoveAssignment.vcxproj|solutionrelative:MoveAssignment\\MoveAssignment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE49B2BE-1947-4242-87DD-F4C66873814C}|MoveSementics\\MoveSementics.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\MoveSementics\\MoveSementics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE49B2BE-1947-4242-87DD-F4C66873814C}|MoveSementics\\MoveSementics.vcxproj|solutionrelative:MoveSementics\\MoveSementics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Binder.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Binder\\Binder.cpp",
+              "RelativeDocumentMoniker": "Binder\\Binder.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Binder\\Binder.cpp*",
+              "RelativeToolTip": "Binder\\Binder.cpp*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-30T13:53:51.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Functor.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Functor\\Functor.cpp",
+              "RelativeDocumentMoniker": "Functor\\Functor.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Functor\\Functor.cpp",
+              "RelativeToolTip": "Functor\\Functor.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-30T13:49:55.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MoveAssignment.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\MoveAssignment\\MoveAssignment.cpp",
+              "RelativeDocumentMoniker": "MoveAssignment\\MoveAssignment.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\MoveAssignment\\MoveAssignment.cpp",
+              "RelativeToolTip": "MoveAssignment\\MoveAssignment.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-30T13:26:37.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MoveSementics.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\MoveSementics\\MoveSementics.cpp",
+              "RelativeDocumentMoniker": "MoveSementics\\MoveSementics.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\MoveSementics\\MoveSementics.cpp",
+              "RelativeToolTip": "MoveSementics\\MoveSementics.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-30T13:11:43.404Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
