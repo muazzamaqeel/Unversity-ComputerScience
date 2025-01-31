@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{728BC71D-70A5-4393-902D-80784771BB54}|STLTasl\\STLTasl.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\STLTasl\\STLTasl.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{728BC71D-70A5-4393-902D-80784771BB54}|STLTasl\\STLTasl.vcxproj|solutionrelative:STLTasl\\STLTasl.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA40164-CE6C-4BE9-A862-6C402916EE74}|Question1\\Question1.vcxproj|C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\Question1\\Question1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FBA40164-CE6C-4BE9-A862-6C402916EE74}|Question1\\Question1.vcxproj|solutionrelative:Question1\\Question1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "STLTasl.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\STLTasl\\STLTasl.cpp",
+              "RelativeDocumentMoniker": "STLTasl\\STLTasl.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\STLTasl\\STLTasl.cpp",
+              "RelativeToolTip": "STLTasl\\STLTasl.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-31T10:21:12.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Question1.cpp",
+              "DocumentMoniker": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\Question1\\Question1.cpp",
+              "RelativeDocumentMoniker": "Question1\\Question1.cpp",
+              "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Last Session\\Question1\\Question1\\Question1.cpp",
+              "RelativeToolTip": "Question1\\Question1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-31T08:21:58.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

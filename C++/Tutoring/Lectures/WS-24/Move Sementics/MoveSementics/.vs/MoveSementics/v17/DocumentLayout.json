@@ -46,7 +46,7 @@
               "RelativeDocumentMoniker": "Binder\\Binder.cpp",
               "ToolTip": "C:\\Git-Hub\\Unversity-ComputerScience\\C\u002B\u002B\\Tutoring\\Lectures\\WS-24\\Move Sementics\\MoveSementics\\Binder\\Binder.cpp",
               "RelativeToolTip": "Binder\\Binder.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-30T13:53:51.984Z",
               "EditorCaption": ""
@@ -61,8 +61,7 @@
               "RelativeToolTip": "Functor\\Functor.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-30T13:49:55.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T13:49:55.405Z"
             },
             {
               "$type": "Document",
@@ -74,8 +73,7 @@
               "RelativeToolTip": "MoveAssignment\\MoveAssignment.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-30T13:26:37.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T13:26:37.341Z"
             },
             {
               "$type": "Document",
@@ -87,8 +85,7 @@
               "RelativeToolTip": "MoveSementics\\MoveSementics.cpp",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-30T13:11:43.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T13:11:43.404Z"
             }
           ]
         }
